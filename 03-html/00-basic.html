@@ -5,6 +5,7 @@
 <html lang="ko">
 
 <!-- head : 페이지 설정 -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,7 @@
       border-bottom: 3px solid tomato;
     }
   </style>
-  
+
   <!-- External css 범용적으로 가장 많이 사용하는 -->
   <link rel="stylesheet" href="./css/comm.css">
 </head>
@@ -70,9 +71,79 @@
     <header>
       <h2>link 태그</h2>
     </header>
+
     <section>
-      <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">HTML Link</a>
+      <!-- 절대경로 -->
+      <a href="https://naver.com" target="_blank">HTML Link</a>
+      <!-- 상대경로 -->
+      <a href="./01-layout.html">layout.html</a>
+      <a href="./images/01-01-daisy-w.jpeg">daisy image</a>
+      <a href="images/01-01-daisy-w.jpeg">dasiy image222</a>
+      <a href="mailto:abc123@abc.com">abc123@abc.com</a>
+      <!-- 웹 접근성 -->
+      <a href="https://www.naver.com" target="_blank" title="새창열림">네이버</a>
+      <a href="#main">main 바로가기</a>
+      <a href="./sub/sub.html#sec3">sub.html > id 값이 sec3</a>
+      <a href="./sub/sub.html#sec2">sub.html > id 값이 sec2</a>
     </section>
+
+    <header>
+      <h2>images 태그</h2>
+    </header>
+    <section>
+      <!-- 상대경로 -->
+      <!-- width, height 속성엔 단위 생략 -->
+      <img src="./images/01-01-daisy-w.jpeg" alt="daisy" width="200">
+      <img src="./images/01-01-daisy-w.jpeg" alt="daisy" style="width: 300px;">
+      <!-- 절대경로 -->
+      <a href="https://xi.co.kr/UPS" target="_blank" title="새창열림">
+        <img src="https://ssl.pstatic.net/melona/libs/1453/1453078/fb43bae1d2fc7dd5ff2b_20230607145540906.jpg" alt="계약금 2,000만원 정액제 중도금 전액 무이자 은평자이 더 스타" width="100%">
+      </a>
+
+      <!-- 반응형 이미지 -->
+      <picture>
+        <!-- width 650px 이상일 경우 -->
+        <source media="(min-width:650px)" srcset="./images/01-01-daisy-w.jpeg">
+        <!-- width 465px 이상일 경우 -->
+        <source media="(min-width:465px)" srcset="./images/img_car.jpg">
+        <img src="./images/img_girl.jpg" alt="뒷통수 아주머니">
+      </picture>
+    </section>
+    
+    <header>
+      <h2>table 태그</h2>
+    </header>
+    <section>
+      <table>
+        <caption>테이블 설명 : 자세한 설명</caption>
+        <colgroup>
+          <col width="40%">
+          <col span="3">
+        </colgroup>
+        <thead>
+          
+        </thead>
+      </table>
+    </section>
+
+
+    <section id="nav">
+      <h2>nav</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores alias cupiditate consequuntur facere fugiat
+        soluta eum officia nihil, quae facilis et nisi, officiis dignissimos aut eligendi beatae atque commodi at?</p>
+    </section>
+    <section>
+      <h2>c1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores alias cupiditate consequuntur facere fugiat
+        soluta eum officia nihil, quae facilis et nisi, officiis dignissimos aut eligendi beatae atque commodi at?</p>
+    </section>
+    <section id="main">
+      <h2>main</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores alias cupiditate consequuntur facere fugiat
+        soluta eum officia nihil, quae facilis et nisi, officiis dignissimos aut eligendi beatae atque commodi at?</p>
+      <a href="#nav">nav 돌아가기</a>
+    </section>
+
   </div>
   <!-- 컨트롤 + / 주석 태그 -->
   <p>안녕</p>
