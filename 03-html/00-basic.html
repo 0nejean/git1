@@ -27,15 +27,14 @@
       border-bottom: 3px solid tomato;
     }
   </style>
-
   <!-- External css 범용적으로 가장 많이 사용하는 -->
   <link rel="stylesheet" href="./css/comm.css">
+
 </head>
 
 <!-- body : 본문  -->
 
 <body>
-
   <div>
     <h1>글씨 태그</h1>
     <header>
@@ -97,36 +96,232 @@
       <img src="./images/01-01-daisy-w.jpeg" alt="daisy" style="width: 300px;">
       <!-- 절대경로 -->
       <a href="https://xi.co.kr/UPS" target="_blank" title="새창열림">
-        <img src="https://ssl.pstatic.net/melona/libs/1453/1453078/fb43bae1d2fc7dd5ff2b_20230607145540906.jpg" alt="계약금 2,000만원 정액제 중도금 전액 무이자 은평자이 더 스타" width="100%">
+        <img src="https://ssl.pstatic.net/melona/libs/1453/1453078/fb43bae1d2fc7dd5ff2b_20230607145540906.jpg"
+          alt="계약금 2,000만원 정액제 중도금 전액 무이자 은평자이 더 스타" width="10%">
       </a>
 
       <!-- 반응형 이미지 -->
       <picture>
         <!-- width 650px 이상일 경우 -->
-        <source media="(min-width:650px)" srcset="./images/01-01-daisy-w.jpeg">
+        <source media="(min-width:650px)" srcset="./images/img_food.jpg">
         <!-- width 465px 이상일 경우 -->
         <source media="(min-width:465px)" srcset="./images/img_car.jpg">
         <img src="./images/img_girl.jpg" alt="뒷통수 아주머니">
       </picture>
     </section>
-    
+
     <header>
       <h2>table 태그</h2>
     </header>
     <section>
       <table>
         <caption>테이블 설명 : 자세한 설명</caption>
+        <!-- 열의 가로 사이즈 -->
         <colgroup>
-          <col width="40%">
-          <col span="3">
+          <!-- span : 열의 갯수 -->
+          <col> 
+          <col width="20%">
+          <col span="4" width="10%">
         </colgroup>
+        <!-- 테이블의 구분 -->
         <thead>
-          
+          <tr>
+            <th scope="col" rowspan="2" colspan="2">과목</th>
+            <th scope="col" colspan="4">1-1</th>
+          </tr>
+          <tr>
+            <th scope="col">다니엘</th>
+            <th scope="col">민지</th>
+            <th scope="col">하니</th>
+            <th scope="col">혜인</th>
+          </tr>
         </thead>
+        <!-- 테이블의 본문 -->
+        <tbody>
+          <tr>
+            <th scope="row" rowspan="3">공통</th>
+            <th scope="row">국어</th>
+            <td>100</td>
+            <td>90</td>
+            <td>80</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <th scope="row">영어</th>
+            <td>100</td>
+            <td>90</td>
+            <td>80</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <th scope="row">수학</th>
+            <td>100</td>
+            <td>90</td>
+            <td>80</td>
+            <td>70</td>
+          </tr>
+        </tbody>
+        <!-- 테이블의 요약 -->
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="2">평균점수</th>
+            <td>100점</td>
+            <td>90점</td>
+            <td>80점</td>
+            <td>70점</td>
+          </tr>
+        </tfoot>
       </table>
     </section>
+    <style>
+      table,tr,th,td {
+        border: 3px solid #2f00ff;
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        height: 70px;
+      }
+      thead {
+        background-color: rgb(255, 208, 0);
+      }
+      tfoot {
+        background-color: rgb(204, 202, 202);
+      }
+    </style>
 
+    <header>
+      <h2>list 태그</h2>
+    </header>
+    <section>
+      <h3>좋아하는 동물</h3>
+      <!-- 순서 없는 목록  -->
+      <ul>
+        <li>강아지</li>
+        <li>고양이</li>
+        <li>물고기</li>
+      </ul>
+      <!-- 순서가 있는 목록 -->
+      <ol>
+        <li>강아지</li>
+        <li>고양이</li>
+        <li>물고기</li>
+      </ol>
 
+      <!-- nav -->
+      <h3>메인 메뉴</h3>
+      <!-- depth1 -->
+      <ul>
+        <li>
+           탑
+           <!-- depth2 -->
+           <ul>
+              <li>
+                블라우스
+                <ul>
+                  <li>depth3</li>
+                  <li>depth3</li>
+                  <li>depth3</li>
+                </ul>
+              </li>
+              <li>티</li>
+              <li>셔츠</li>
+              <li>니트</li>
+          </ul>
+        </li>
+        <li>
+            아우터
+            <ul>
+                <li>자켓</li>
+                <li>코트</li>
+                <li>
+                  가디건
+                  <ul>
+                    <li>depth3</li>
+                    <li>depth3</li>
+                    <li>depth3</li>
+                </ul>
+                <li>머플러</li>
+            </li>
+        </li>
+        <li>
+            팬츠
+            <ul>
+                <li>청바지</li>
+                <li>짧은바지</li>
+                <li>긴바지</li>
+                <li>레깅스</li>
+            </ul>
+        </li>
+        <li>
+            악세사리
+            <ul>
+                <li>귀고리</li>
+                <li>목걸이</li>
+                <li>반지</li>
+                <li>팔찌</li>
+            </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#">depth1</a>
+          <ul>
+              <li>
+                <a href="#">depth2</a>
+                <ul>
+                  <li>
+                    <a href="#">depth3</a>
+                  </li>
+                </ul>
+              </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">depth2</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">depth1</a>
+          <ul>
+            <li>
+              <a href="#">depth2</a>
+              <ul>
+                <li>
+                  <a href="#">depth3</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">depth2</a>
+            </li>  
+          </ul>
+        </li>
+        <li>
+          <a href="#">depth1</a>
+          <ul>
+            <li>
+              <a href="#">depth2</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">depth2</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    
+
+    <header>
+      <h2>북마크 태그</h2>
+    </header>
     <section id="nav">
       <h2>nav</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores alias cupiditate consequuntur facere fugiat
