@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>form</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 100px;
+      }
+      input {
+        display: inline-block;
+        width: 200px;
+      }
+    </style>
   </head>
   <body>
     <h1>html form</h1>
@@ -23,6 +33,118 @@
           유익한 정보를 포함하고 있습니다.
         </div>
       </div>
+      <div class="terms_item">
+        <input type="checkbox" id="terms2" />
+        <label for="terms2">개인정보 수집 및 이용</label>
+      </div>
+      <!-- submit 버튼 클릭 시 상단에 있는 정보가 전송 -->
+      <input type="submit" value="확인" id="btnSend2" name="btnSend2" />
+    </form>
+    <hr />
+    <form action="">
+      <div>
+        <label for="id">아이디</label>
+        <input
+          type="text"
+          name="id"
+          id="id"
+          placeholder="10자 이하"
+          maxlength="10"
+        />
+      </div>
+      <div>
+        <label for="pw">비밀번호</label>
+        <input type="password" name="pw" id="pw" />
+      </div>
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" /> @
+        <select name="selemail" id="selemail">
+          <option value="이메일 선택">이메일 선택</option>
+          <option value="gmail.com">gmail.com</option>
+          <option value="naver.com">naver.com</option>
+        </select>
+      </div>
+      <div>
+        <label for="birth">생년월일</label>
+        <input type="number" name="birth" id="birth" />
+      </div>
+      <div>
+        <strong>성별</strong>
+        <input type="radio" name="gender" id="gender1" />
+        <label for="gender1">남자</label>
+        <input type="radio" name="gender" id="gender2" />
+        <label for="gender2">여자</label>
+        <input type="radio" name="gender" id="gender3" />
+        <label for="gender3">선택안함</label>
+      </div>
+
+      <div>
+        <strong>언어</strong>
+        <input type="radio" name="lang" id="lang1" />
+        <label for="lang1">HTML</label>
+        <input type="radio" name="lang" id="lang2" />
+        <label for="lang2">CSS</label>
+        <input type="radio" name="lang" id="lang3" />
+        <label for="lang3">선택안함</label>
+      </div>
+
+      <div>
+        <label for="selNation">국가</label>
+        <select name="selNation" id="selNation" disabled>
+          <option value="대한민국">대한민국</option>
+          <option value="미국">미국</option>
+          <option value="중국">중국</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="phone">휴대전화번호</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          value="01031112469"
+          readonly
+          maxlength="11"
+        />
+      </div>
+
+      <input type="button" value="인증 요청" id="btnSend" name="btnSend" />
+    </form>
+    <hr />
+    <form action="">
+      <fieldset>
+        <legend>폼 설명</legend>
+
+        <div>
+          <label for="title">제목</label>
+          <input type="text" id="title" name="title" />
+        </div>
+
+        <div>
+          <label for="bbs">본문</label>
+          <textarea name="bbs" id="bbs" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+          <label for="myfile">파일첨부</label>
+          <input type="file" name="myfile" id="myfile" />
+        </div>
+
+        <button id="ok">저장</button>
+        <input type="reset" value="취소" id="cancel" />
+      </fieldset>
+    </form>
+
+    <form action="">
+      <fieldset>
+        <legend>검색</legend>
+        <div>
+          <label for="search">검색</label>
+          <input type="search" name="search" id="search" />
+        </div>
+      </fieldset>
     </form>
   </body>
 </html>
