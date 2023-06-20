@@ -21,8 +21,8 @@
     <form action="">
       <div class="terms_item">
         <div class="inp">
-          <input type="checkbox" name="" id="check1" />
-          <label for="check1">네이버 이용약관</label>
+          <input type="checkbox" name="" id="check1" required />
+          <label for="check1">[필수선택] 네이버 이용약관</label>
         </div>
         <div class="box">
           여러분을 환영합니다. 네이버 서비스 및 제품(이하 ‘서비스’)을 이용해
@@ -50,6 +50,8 @@
           id="id"
           placeholder="10자 이하"
           maxlength="10"
+          required
+          autofocus
         />
       </div>
       <div>
@@ -129,7 +131,8 @@
 
         <div>
           <label for="myfile">파일첨부</label>
-          <input type="file" name="myfile" id="myfile" multiple />
+          <input type="file" name="myfile" id="myfile" />
+          <input type="file" name="myfile" id="myfile" />
         </div>
 
         <button id="ok">저장</button>
