@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성선택자 | css</title>
+  </head>
+
+  <body>
+    <h1>속성선택자</h1>
+    <input type="text" id="id" name="id" placeholder="아이디" />
+    <input type="password" id="pw" name="pw" placeholder="비밀번호" />
+  </body>
+
+  <style>
+    input {
+      height: 50px;
+      border: 5px solid blue;
+      background: lightblue;
+    }
+    input:focus {
+      border: 5px solid red;
+      background: pink;
+    }
+  </style>
+</html>

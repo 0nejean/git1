@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상선택자 | css</title>
+    <style>
+      /* reset */
+      * {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>가상선택자</h1>
+
+    <h2>순서</h2>
+    <ul class="lst">
+      <li>menu 1</li>
+      <li>menu 2</li>
+      <li>menu 3</li>
+      <li>menu 4</li>
+    </ul>
+    <style>
+      .lst {
+        border: 5px solid greenyellow;
+      }
+      .lst li {
+        border: 5px solid pink;
+        margin: 5px;
+      }
+      .lst li:first-child {
+        background: #f6ff49;
+      }
+      .lst li:nth-child(2) {
+        background: #00ff48;
+      }
+      .lst li:nth-child(3) {
+        background: blue;
+      }
+      .lst li:last-child {
+        background: purple;
+      }
+      .lst li:hover {
+        background: #000;
+        color: white;
+      }
+    </style>
+
+    <h2>링크 가상선택자</h2>
+    <a href="#">링크 가상선택자</a>
+    <style>
+      a {
+        font-size: 20px;
+      }
+      /* a가 원래 링크라서 :link 묶어서 잘 안씀 */
+      a:link {
+        color: #000;
+      }
+      a:hover {
+        color: red;
+      }
+      a:active {
+        color: green;
+      }
+      a:visited {
+        color: blueviolet;
+      }
+    </style>
+
+    <h2>가상 엘리먼트 선택자</h2>
+    <ul class="lst2">
+      <li><a href="#">공지사항글</a></li>
+      <li><a href="#">공지사항글</a></li>
+      <li><a href="#">공지사항글</a></li>
+      <li><a href="#">공지사항글</a></li>
+    </ul>
+    <style>
+      .lst2 li::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #000;
+        border-radius: 10px;
+        margin-right: 10px;
+      }
+      .lst2 li::after {
+        content: "뒤뒤뒤";
+      }
+      .lst2 a::before {
+        content: "before";
+      }
+      .lst2 a::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: blue;
+      }
+      .lst2 a {
+        color: red;
+      }
+    </style>
+
+    <ul class="lst3">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+    <style>
+      .lst3 {
+        display: flex;
+      }
+      .lst3 li::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: blue;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+      .lst3 li:last-child::after {
+        display: none;
+      }
+      .lst3::before {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 30px;
+        background: red;
+        margin-right: 10px;
+      }
+      .lst3::after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 30px;
+        background: red;
+        margin-left: 10px;
+      }
+    </style>
+  </body>
+</html>
