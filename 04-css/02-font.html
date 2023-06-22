@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Kablammo&display=swap"
+      rel="stylesheet"
+    />
+    /> />
+    <title>font | css</title>
+  </head>
+  <!-- 웹디자인기능사용 reset head ~/head까지 기본값설정 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      color: #222328;
+      /* text-decoration: none; */
+      list-style: none;
+      box-sizing: border-box;
+      /* 안정성 글꼴 */
+      font-family: "Malgun Gothic", "맑은 고딕", helvetica,
+        "Apple SD Gothic Neo", sans-serif;
+      /* font-family: "Gasoek One", sans-serif;
+      font-family: "Kablammo", cursive; */
+      font-size: 16px;
+    }
+  </style>
+  <body>
+    <h1>font</h1>
+
+    <h2 class="일반">일반</h2>
+    <div class="font1">
+      <strong>타이틀</strong>
+      <p>
+        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를
+        인정하는
+      </p>
+      <!-- em태그 절대값 -->
+      <em>
+        기울어짐 <br />
+        <span>기울어짐</span>
+      </em>
+      <br />
+      <b>
+        기울어짐 <br />
+        <span>기울어짐</span>
+      </b>
+    </div>
+    <style>
+      .일반 {
+        font-size: 30px;
+        font-family: "Gasoek One", sans-serif;
+      }
+      .font1 strong {
+        font-family: "Orbit", sans-serif;
+        font-size: 40px;
+        font-weight: normal;
+      }
+      .font1 p {
+        font-family: "나눔고딕", serif;
+      }
+      .font1 em {
+        font-style: normal;
+        /* font-weight: bold;  */
+        font-size: 60px;
+      }
+      .font1 em span {
+        /* 60px */
+        /* em : 엄마 태그를 기준 */
+        font-size: 1em;
+      }
+      .font1 b {
+        /* 60px */
+        font-size: 3.75em;
+      }
+      .font1 b span {
+        /* 16px */
+        /* rem : html, body 태그 기준 */
+        font-size: 1rem;
+      }
+    </style>
+
+    <h2>font size</h2>
+
+    <strong>vw</strong>
+    <div class="vw">Responsive Text</div>
+    <div class="vh">Responsive Text</div>
+    <style>
+      .vw {
+        font-family: "Kablammo", cursive;
+        font-size: 17vw;
+      }
+      .vh {
+        font-size: 10vh;
+      }
+    </style>
+    <h2>text</h2>
+    <strong>vertocal align</strong>
+    <div class="ver"><img src="./images/111.png" alt="listening" /> 리스닝</div>
+  </body>
+  <style>
+    .ver {
+      font-size: 30px;
+    }
+    .ver img {
+      vertical-align: middle;
+      margin-top: -5px;
+    }
+  </style>
+  <strong>decoration</strong>
+  <a href="#">글씨글씨 난 글씨야 넌 뭐니?</a>
+  <style>
+    a {
+      text-decoration: none;
+    }
+  </style>
+</html>
