@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boxmodel | css</title>
+  </head>
+  <body>
+    <h1>박스모델</h1>
+    <!-- reset
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style> -->
+    <h2>가로사이즈</h2>
+    <div class="box1">
+      <!-- div 큰 사각형 > p 그 안에 사각형 > span 문장 -->
+      <!-- ＜div＞는 줄바꿈이 되지만 ＜span＞태그는 옆으로 붙는다. 텍스트를 표현할 때 ＜div＞는 사각형 박스로 구역을 정하지만 ＜span＞은 문장 단위로 지정함. -->
+      <!-- span '인라인' 태그 : width, height 안들어감 -->
+      <span>span 태그</span>
+      <span>span 태그</span>
+      <!-- div '블록' 태그 : width, height 들어감 -->
+      <div>div 태그</div>
+      <div>div 태그</div>
+    </div>
+
+    <style>
+      .box1 {
+        background: red;
+      }
+      .box1 span {
+        /* width: 100px;
+        height: 100px; */
+        background-color: yellow;
+      }
+      .box1 div {
+        width: 50%;
+        /* height: 100px; */
+        background-color: blueviolet;
+      }
+    </style>
+    <br /><br /><br /><br />
+
+    <h2>세로 사이즈</h2>
+    <div class="box2">
+      <div></div>
+    </div>
+    <style>
+      .box2 {
+        background: gray;
+      }
+      .box2 div {
+        height: 100vh;
+        background: yellow;
+      }
+    </style>
+    <h2>max-width</h2>
+    <div class="box3">max-width</div>
+    <style>
+      .box3 {
+        max-width: 500px;
+        min-width: 320px;
+        height: 100px;
+        margin: auto;
+        background: greenyellow;
+      }
+    </style>
+
+    <h2>margin</h2>
+    <!-- class를 부르는 게 . 표시 -->
+    <div class="box4">
+      <div class="box4-1"></div>
+      <div class="box4-2"></div>
+      <div class="box4-3"></div>
+      <div class="box4-4"></div>
+      <div class="box4-5"></div>
+      <div class="box4-6"></div>
+    </div>
+    <style>
+      .box4 {
+        margin: 10px 20px 30px 40px;
+        background: goldenrod;
+      }
+      .box4 div {
+        width: 100px;
+        height: 100px;
+        background: orchid;
+      }
+      .box4 .box4-1 {
+        margin-top: 100px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+      }
+      .box4 .box4-2 {
+        margin: 50px;
+      }
+      .box4 .box4-3 {
+        margin: 100px 50px;
+      }
+      .box4 .box4-4 {
+        margin: 200px 300px 400px;
+      }
+      .box4 .box4-5 {
+        margin: 0 auto;
+      }
+      .box4 .box4-6 {
+        margin: inherit;
+      }
+    </style>
+    <h2>padding</h2>
+    <div class="box5">
+      <div>padding1</div>
+      <div>padding2</div>
+      <div>padding3</div>
+      <br />
+    </div>
+    <style>
+      .box5 div {
+        display: inline-block;
+        border: 1px solid #000;
+        background: paleturquoise;
+      }
+      .box5 div:first-child {
+        padding: 10px;
+      }
+      .box5 div:nth-child(2) {
+        margin: 0 20px;
+        padding: 20px 50px;
+      }
+      .box5 div:nth-child(3) {
+        padding: 20px 100px 50px;
+      }
+    </style>
+    <div class="box6">
+      <div>padding4</div>
+      <div>padding5</div>
+      <div>padding6</div>
+      <div>padding7</div>
+    </div>
+    <style>
+      .box6 div {
+        width: 100px;
+        height: 100px;
+        background: palegoldenrod;
+        border: 0px solid #000;
+      }
+      .box6 div:nth-child(2) {
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+        background: red;
+      }
+      .box6 div:nth-child(3) {
+        width: 40px;
+        height: 80px;
+        padding: 10px 30px;
+      }
+      .box6 div:nth-child(4) {
+        padding: 10px 30px;
+        box-sizing: border-box;
+        background: red;
+      }
+    </style>
+    <h2>border</h2>
+    <div class="box7">
+      <div>box7-1</div>
+      <div>box7-2</div>
+      <div>box7-3</div>
+      <div>box7-4</div>
+      <div>box7-5</div>
+    </div>
+    <style>
+      .box7 div {
+        width: 100px;
+        height: 100px;
+        background: palevioletred;
+      }
+      .box7 div:first-child {
+        border: 10px solid rgb(17, 0, 255, 0.5);
+        border-radius: 25px;
+      }
+      .box7 div:nth-child(2) {
+        border: 20px dotted #000;
+        box-sizing: border-box;
+      }
+      .box7 div:nth-child(3) {
+        border-left: 6px solid red;
+      }
+      .box7 div:nth-child(4) {
+        border-bottom: 1px solid #000;
+      }
+      .box7 div:nth-child(5) {
+        border: 5px solid red;
+        border-radius: 30px;
+      }
+    </style>
+  </body>
+</html>
