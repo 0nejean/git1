@@ -14,43 +14,33 @@
   margin: 0 auto;
   background: #eee;
 }
-
 .header {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
   height: 100px;
-  background: lightpink;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
   background: white;
+}
+.logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
-
 .logo a {
   display: block;
   width: 200px;
   height: 40px;
-  background: lightgreen;
 }
-
 .gnb .depth1 {
   display: flex;
 }
-
-.gnb .depth1 .a {
+.gnb .depth1 a {
   display: block;
   height: 100px;
-  padding: 0px, 50px;
+  padding: 0 50px;
   line-height: 100px;
   background: lawngreen;
   border: 1px solid #000;
+  text-align: center;
 }
-
 .gnb .depth2 {
   display: none;
 }
