@@ -14,33 +14,98 @@
   margin: 0 auto;
   background: #eee;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   height: 100px;
   background: white;
 }
+
 .logo {
   display: flex;
   align-items: center;
 }
+
 .logo a {
   display: block;
   width: 200px;
   height: 40px;
 }
+
 .gnb .depth1 {
   display: flex;
 }
-.gnb .depth1 a {
+
+.gnb .depth1 > li > a {
   display: block;
   height: 100px;
   padding: 0 50px;
   line-height: 100px;
-  background: lawngreen;
-  border: 1px solid #000;
   text-align: center;
 }
+
+.gnb .depth1 > li > a:hover {
+  /* background: white; */
+  border-bottom: 3px solid #ff043f;
+}
+
+.gnb .depth1:hover.depth2 {
+  display: block;
+}
+
 .gnb .depth2 {
   display: none;
+  padding: 20px, 0px;
+  background: white;
 }
+
+.gnb .depth2 a {
+  display: block;
+  height: 40px;
+  /* padding: 50px, 0px; */
+  text-align: center;
+  line-height: 40px;
+  background: white;
+}
+
+.gnb .depth2 a:hover {
+  border-bottom: 3px solid #ff043f;
+}
+
+/* slide */
+.slide {
+  overflow: hidden;
+  height: 300px;
+}
+
+.slide a,
+.slide img {
+  display: block;
+}
+
+/* contents */
+.contents {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px, 0px;
+}
+
+.tabs {
+  width: 335px;
+}
+
+.bnr {
+  width: 400px;
+}
+
+.bnr a,
+.bnr img {
+  display: block;
+}
+
+.goto {
+  width: 342px;
+}
+
+/* banner */
