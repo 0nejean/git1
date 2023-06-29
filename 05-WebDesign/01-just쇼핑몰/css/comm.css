@@ -92,7 +92,7 @@
 }
 
 .tabs {
-  width: 335px;
+  width: calc(100% / 2 - 230px);
 }
 
 .bnr {
@@ -105,7 +105,27 @@
 }
 
 .goto {
-  width: 342px;
+  width: calc(100% / 2 - 230px);
+}
+
+.goto ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 180px;
+}
+
+.goto li {
+  width: calc(50% - 5px);
+  height: calc(50% - 5px);
+  background: blue;
+}
+
+.goto a {
+  display: block;
+  height: 100%;
+  background: red;
 }
 
 /* banner */
