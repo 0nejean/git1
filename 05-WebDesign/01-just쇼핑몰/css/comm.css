@@ -12,7 +12,7 @@
 .wrap {
   width: 1200px;
   margin: 0 auto;
-  background: #eee;
+  /* background: #eee; */
 }
 
 .header {
@@ -91,10 +91,94 @@
   padding-top: 10px, 0px;
 }
 
-.tabs {
+/* tabs-wrap */
+.tabs-wrap {
+  position: relative;
+  display: flex;
   width: calc(100% / 2 - 230px);
 }
 
+.tabs-wrap .tab-item {
+  width: 50%;
+}
+
+/* 활성화 */
+.tabs-wrap .tab-item.on .tit {
+  background: #ff043f;
+  color: white;
+}
+
+.tabs-wrap .tab-item .cont {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height: 130px;
+  /* background: lightcoral; */
+}
+
+/* 비활성화 - 탭 중에 당장 사용하지 않음 */
+.tabs-wrap .tab-item .tit {
+  height: 50px;
+  padding-top: 6px;
+  border-bottom: 2px solid #ff043f;
+  background: #ddd;
+  text-align: center;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.tabs-wrap .on .cont {
+  display: block;
+}
+
+.list-bbs {
+  padding-top: 13px;
+}
+
+.lst-bbs li {
+  display: flex;
+  align-items: center;
+}
+
+.lst-bbs li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-top: -4px;
+  margin-right: 10px;
+  background: red;
+}
+
+.list-bbs li a {
+  display: block;
+  line-height: 2;
+}
+
+.lst-bbs li a:hover {
+  text-decoration: underline;
+}
+
+/* 갤러리 */
+.lst-gallery {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.lst-gallery li {
+  width: 92px;
+}
+
+.lst-gallery li p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* banner */
 .bnr {
   width: 400px;
 }
@@ -104,6 +188,7 @@
   display: block;
 }
 
+/* go to */
 .goto {
   width: calc(100% / 2 - 230px);
 }
@@ -128,4 +213,32 @@
   background: red;
 }
 
-/* banner */
+/* footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  border-top: 1px solid #d7d7d7;
+}
+
+.logo-foot a {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.lst-sns {
+  display: flex;
+}
+
+.lst-sns li {
+  margin-left: 20px;
+}
+
+.lst-sns a {
+  display: block;
+  line-height: 100px;
+  height: 100px;
+}
