@@ -19,25 +19,73 @@
   <body>
     <h1>position</h1>
 
-    <h2>relative</h2>
+    <h2>sticky</h2>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
 
-    <div class="box">
-      <div class="absolute">1</div>
-    </div>
-    <div class="box relative">
-      <div class="absolute">2</div>
-    </div>
-    <div class="box">
-      <div class="absolute">3</div>
+    <h2>relative</h2>
+    <!-- relative : 내가 기준 - 기준 -->
+    <!-- absolute : 부모(relative) 기준 -->
+    <div class="wrap">
+      <div class="box">
+        <div class="absolute">1</div>
+      </div>
+      <div class="box relative">
+        <div class="absolute">2</div>
+      </div>
+      <div class="box static">
+        <div class="absolute">3</div>
+      </div>
     </div>
 
     <style>
+      .parent {
+        height: 700px;
+        background: lightsalmon;
+      }
+
+      .child {
+        height: 50px;
+        width: 80%;
+        background: skyblue;
+        border: 9px solid #000;
+      }
+
+      .wrap {
+        body {
+          height: 3000px;
+        }
+
+        .container {
+          position: relative;
+          height: 1000px;
+          border: 10px solid red;
+        }
+
+        header {
+          height: 300px;
+          background: lightblue;
+        }
+
+        nav {
+          position: sticky;
+          top: 0;
+          left: 0;
+          height: 300px;
+          background: green;
+        }
+        position: relative;
+        height: 200vh;
+        background: lightpink;
+      }
       .absolute {
         position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 50px;
-        height: 50px;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 70px;
         background: greenyellow;
       }
       .relative {
@@ -51,6 +99,41 @@
         height: 200px;
         background: tomato;
         border: 1px solid red;
+      }
+      .static {
+        position: static;
+      }
+    </style>
+
+    <h2>fixed</h2>
+    <header class="header-fixed">header</header>
+    <footer class="footer-fixed">footer</footer>
+    <style>
+      /* fixed : 뷰포트(브라우저) 기준 */
+      .header-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: blue;
+        border: 10px dotted #000;
+      }
+
+      .footer-fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: blue;
+        border: 10px dotted #000;
+      }
+
+      /* 특별한 경우를 제외하고 바디에 스타일 태그 넣지 않음. */
+      body {
+        padding-top: 100px;
+        padding-bottom: 100px;
       }
     </style>
   </body>
