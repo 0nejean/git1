@@ -19,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   height: 100px;
-  background: white;
+  /* background: white; */
 }
 
 .logo {
@@ -91,7 +91,7 @@
   padding-top: 10px, 0px;
 }
 
-/* tabs-wrap */
+/* tab */
 .tabs-wrap {
   position: relative;
   display: flex;
@@ -102,8 +102,19 @@
   width: 50%;
 }
 
-/* 활성화 */
-.tabs-wrap .tab-item.on .tit {
+/* 비활성화 tab */
+.tabs-wrap .tab-item .tit {
+  height: 50px;
+  padding-top: 15px;
+  border-bottom: 2px solid #ff043f;
+  background: #ddd;
+  text-align: center;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* 활성화 tab */
+.tabs-wrap .ton .tit {
   background: #ff043f;
   color: white;
 }
@@ -118,23 +129,12 @@
   /* background: lightcoral; */
 }
 
-/* 비활성화 - 탭 중에 당장 사용하지 않음 */
-.tabs-wrap .tab-item .tit {
-  height: 50px;
-  padding-top: 6px;
-  border-bottom: 2px solid #ff043f;
-  background: #ddd;
-  text-align: center;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-
 .tabs-wrap .on .cont {
   display: block;
 }
 
 .list-bbs {
-  padding-top: 13px;
+  padding-top: 20%;
 }
 
 .lst-bbs li {
@@ -169,12 +169,12 @@
 }
 
 .lst-gallery li {
-  width: 92px;
+  width: 100px;
 }
 
 .lst-gallery li p {
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -241,4 +241,9 @@
   display: block;
   line-height: 100px;
   height: 100px;
+}
+
+/* modal */
+
+.modal-box {
 }

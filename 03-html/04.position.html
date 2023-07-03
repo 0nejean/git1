@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position | css</title>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        line-height: 1.5px;
+        text-decoration: none;
+        color: #333;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>position</h1>
+
+    <h2>relative</h2>
+
+    <div class="box">
+      <div class="absolute">1</div>
+    </div>
+    <div class="box relative">
+      <div class="absolute">2</div>
+    </div>
+    <div class="box">
+      <div class="absolute">3</div>
+    </div>
+
+    <style>
+      .absolute {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 50px;
+        height: 50px;
+        background: greenyellow;
+      }
+      .relative {
+        position: relative;
+        top: 100px;
+        left: 300px;
+      }
+      .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: tomato;
+        border: 1px solid red;
+      }
+    </style>
+  </body>
+</html>
