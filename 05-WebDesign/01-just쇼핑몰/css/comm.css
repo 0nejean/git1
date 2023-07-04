@@ -37,6 +37,10 @@
   display: flex;
 }
 
+.gnb .depth1 > li {
+  position: relative;
+}
+
 .gnb .depth1 > li > a {
   display: block;
   height: 100px;
@@ -54,10 +58,21 @@
   display: block;
 }
 
+.gnb .depth1 > li:last-child .depth2 {
+  border-right: 1px solid #ff043f;
+}
+
 .gnb .depth2 {
-  display: none;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* display: none; */
   padding: 20px, 0px;
   background: white;
+  border: 1px solid #ff043f;
+  border-right: none;
 }
 
 .gnb .depth2 a {
@@ -66,14 +81,13 @@
   /* padding: 50px, 0px; */
   text-align: center;
   line-height: 40px;
-  background: white;
 }
 
 .gnb .depth2 a:hover {
   border-bottom: 3px solid #ff043f;
 }
 
-/* slide */
+/* slide
 .slide {
   overflow: hidden;
   height: 300px;
@@ -82,6 +96,24 @@
 .slide a,
 .slide img {
   display: block;
+} */
+
+/* silde2 */
+.silde-wrap a,
+.silde-wrap img {
+  display: block;
+}
+
+.silde-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.lst-silde {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* contents */
@@ -89,6 +121,7 @@
   display: flex;
   justify-content: space-between;
   padding-top: 10px, 0px;
+  margin: 10px;
 }
 
 /* tab */
@@ -126,6 +159,7 @@
   left: 0;
   right: 0;
   height: 130px;
+  padding: 10px;
   /* background: lightcoral; */
 }
 
@@ -210,7 +244,7 @@
 .goto a {
   display: block;
   height: 100%;
-  background: red;
+  background: #ff043f;
 }
 
 /* footer */
@@ -246,7 +280,7 @@
 /* modal */
 .modal-dimmed {
   display: none;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   position: fixed;
