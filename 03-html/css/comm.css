@@ -1,3 +1,120 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #333;
+}
+
 section {
-  background: #eaecc7; 
+  background: #fffcd6;
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  background: #eee;
+}
+
+header {
+  /* overflow: hidden; */
+  padding: 30px;
+  padding-right: 0px;
+  background: lightcoral;
+}
+
+header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+header h1 {
+  float: left;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  padding-top: 10px;
+  background: lightgoldenrodyellow;
+}
+
+header nav ul::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+header nav li {
+  float: left;
+  margin-left: 20px;
+}
+
+main {
+  overflow: hidden;
+}
+
+main .cont {
+  float: left;
+  width: 30%;
+  height: 200px;
+  margin-right: 5%;
+  background: lightseagreen;
+  border: 10px dotted #000;
+}
+
+main .cont3 {
+  margin-right: 0;
+}
+
+/* footer {
+  overflow: hidden;
+  padding: 30px;
+  padding-right: 0px;
+  background: lightcoral;
+}
+
+footer::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+footer .foot1 {
+  float: left;
+  margin-right: 500px;
+}
+
+footer .foot2 {
+  float: left;
+  margin-right: 500px;
+}
+
+footer .foot3 {
+  float: left;
+} */
+
+footer {
+  height: 100px;
+  background: lightcoral;
+}
+
+footer .foot1 {
+  float: left;
+}
+
+footer .foot3 {
+  float: right;
+  margin-top: -30px;
+}
+
+footer .foot2 {
+  text-align: center;
 }
