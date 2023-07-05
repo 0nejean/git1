@@ -14,6 +14,12 @@ section {
   background: #fffcd6;
 }
 
+.clearfix ::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
 .wrap {
   width: 1200px;
   margin: 0 auto;
@@ -27,11 +33,11 @@ header {
   background: lightcoral;
 }
 
-header::after {
+/* header::after {
   content: "";
   clear: both;
   display: block;
-}
+} */
 
 header h1 {
   float: left;
@@ -46,11 +52,11 @@ header nav ul {
   background: lightgoldenrodyellow;
 }
 
-header nav ul::after {
+/* header nav ul::after {
   content: "";
   clear: both;
   display: block;
-}
+} */
 
 header nav li {
   float: left;
@@ -117,4 +123,20 @@ footer .foot3 {
 
 footer .foot2 {
   text-align: center;
+}
+
+.container li {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border: 10px dotted #000;
+  background: lightblue;
+}
+
+.container li:nth-child(3) {
+  clear: left;
+}
+
+.container li:nth-child(5) {
+  clear: left;
 }
