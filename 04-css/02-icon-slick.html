@@ -97,6 +97,10 @@
       .slick-prev::before {
         content: "\f104";
       }
+
+      .slick-dots li.slick-active button:before {
+        color: #eee;
+      }
     </style>
     <script
       type="text/javascript"
@@ -110,7 +114,7 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $(".sec-slide").slick({
-          // setting- name: setting - value
+          dots: true,
         });
       });
     </script>
