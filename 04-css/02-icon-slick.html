@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slick | css</title>
+    <link rel="stylesheet" href="./dist/slick/slick.css" />
+    <link rel="stylesheet" href="./dist/slick/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        text-decoration: none;
+        line-height: 1.5;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>slick</h1>
+    <div class="sec-slide">
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1688488994043-ffb1a6c211f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1688362379195-b8c04f735968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1688410053610-42290a7267df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1529&q=80"
+          alt=""
+        />
+      </div>
+    </div>
+    <style>
+      .sec-slide {
+        position: relative;
+        width: 300px;
+        margin: 0 auto;
+        background: lightblue;
+      }
+
+      .sec-slide img {
+        width: 100%;
+      }
+
+      .slick-prev,
+      .slick-next {
+        background: lightpink;
+      }
+
+      .slick-prev:hover,
+      .slick-next:hover {
+        background: greenyellow;
+      }
+
+      .slick-arrow {
+        z-index: 100;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        background: #eee;
+        border-radius: 50%;
+      }
+
+      .slick-arrow::before {
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        color: #000;
+        font-size: 1.5rem;
+      }
+
+      .slick-next {
+        right: -35px;
+      }
+
+      .slick-next::before {
+        content: "\f105";
+      }
+
+      .slick-prev {
+        left: -35px;
+      }
+
+      .slick-prev::before {
+        content: "\f104";
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="./dist/slick/slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".sec-slide").slick({
+          // setting- name: setting - value
+        });
+      });
+    </script>
+  </body>
+</html>
