@@ -83,6 +83,75 @@
       }
     </style>
 
-    <h2></h2>
+    <h2 class>sprite</h2>
+
+    <div class="wrap">
+      <div class="img-g sprite1"></div>
+      <div class="img-g sprite2"></div>
+      <div class="img-g sprite3"></div>
+      <div class="img-g sprite4"></div>
+      <div class="img-g sprite5"></div>
+    </div>
+    <style>
+      .wrap {
+        display: flex;
+        /* justify-content: space-between; */
+        /* justify-content: center;
+        align-items: center; */
+      }
+
+      .img-g {
+        background-image: url("./images/image-sprite.png");
+        background-repeat: no-repeat;
+      }
+
+      .sprite1 {
+        width: 134px;
+        height: 132px;
+        background-position: 0 0;
+      }
+
+      .sprite2 {
+        width: 40px;
+        height: 38px;
+        background-position: -160px 0;
+      }
+
+      .sprite3 {
+        width: 40px;
+        height: 40px;
+        background-position: -160px -60px;
+      }
+
+      .sprite3:hover {
+        width: 40px;
+        height: 38px;
+        background-position: -160px -360px;
+      }
+
+      .sprite4 {
+        width: 40px;
+        height: 40px;
+        background-position: -219px -0px;
+      }
+
+      .sprite4:hover {
+        width: 40px;
+        height: 40px;
+        background-position: -259px -0px;
+      }
+
+      .sprite5 {
+        width: 40px;
+        height: 40px;
+        background-position: -219px -0px;
+      }
+
+      .sprite5:hover {
+        width: 40px;
+        height: 40px;
+        background-position: -299px -0px;
+      }
+    </style>
   </body>
 </html>
