@@ -16,25 +16,99 @@
       }
     </style>
   </head>
-  <body>
+  <!-- <body>
     <div class="box-g box1">
       <div>1</div>
       <div>2</div>
       <div>3</div>
     </div>
     <style>
+      .box-g {
+        height: 300px;
+        background: lightgray;
+        border: 10px dotted #000;
+      }
       .box1 {
         display: flex;
       }
       .box1 div {
         flex-grow: 1;
-        height: 300px;
-        background: lightgray;
-        border: 10px dotted #000;
       }
+      /* desktop to mobile - 모바일에서 데스크탑으로 크기가 커지기 전 설정값 */
       @media screen and (max-width: 600px) {
         .box1 {
           flex-direction: column;
+        }
+      }
+    </style>
+
+    <div class="box-g box2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <style>
+      /* moblie to desktop */
+      @media screen and (min-width: 600px) {
+        .box2 div {
+          float: left;
+          width: 33.3%;
+        }
+      }
+    </style> -->
+
+    <h2>layout</h2>
+    <div class="wrap">
+    <header class="box">
+    <h1>logo</h1>
+    <nav>Navigation Menu</nav>
+    </header>
+    <div class="container">
+      <div class="content box">content</div>
+      <div class="content box">content</div>
+      <div class="content box">content</div>
+    </div>
+    <footer class="box">
+      <h1>logo</h1>
+      <div class="copyright">copyright</div>
+      <div class="sns">sns</div>
+    </footer>
+    </div>
+    <style>
+      .box {
+        margin: 20px;
+        background: lightgray;
+      }
+      .wrap {
+        width: 1200px;
+        margin: auto;
+        padding: 20px;
+        background-color: lightcyan;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+      }
+      /* nav {
+        height: auto;
+      } */
+      .container {
+        display: flex;
+      }
+      .content {
+        flex-grow: 1;
+        height: 300px;
+      }
+      footer {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+      }
+      @media screen and (max-width: 1200px) {
+       .wrap {
+          width: 100%;
         }
       }
     </style>
