@@ -86,8 +86,8 @@
         background: rgb(207, 207, 207);
       }
       .box-g div {
-        /* width: 100px;
-        height: 100px; */
+        width: 100px;
+        height: 100px;
         background: lightcoral;
         border: 1px solid #000;
       }
@@ -230,14 +230,59 @@
       .box14 {
         display: flex;
       }
-      .box14 div:nth-child(3) {
-        flex-grow: 8;
+      .box14 div {
+        width: auto;
+      }
+      .box14 div:nth-child(1) {
+        flex-grow: 1;
       }
       .box14 div:nth-child(2) {
         flex-grow: 1;
       }
-      .box14 div:nth-child(1) {
+      .box14 div:nth-child(3) {
+        flex-grow: 2;
+      }
+    </style>
+    <h2>flex-shrink</h2>
+    <div class="box-g box15">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </div>
+    <style>
+      .box15 {
+        display: flex;
+      }
+      .box15 div:nth-child(3) {
+        flex-shrink: 0;
+      }
+    </style>
+    <h2>flex-basis</h2>
+    <div class="box-g box16">
+      <div>가</div>
+      <div>가나</div>
+      <div>가나다</div>
+      <div>가나다라</div>
+    </div>
+    <style>
+      .box16 {
+        display: flex;
+      }
+      .box16 div {
+        flex-basis: auto;
+      }
+      .box16 div:nth-child(-n + 3) {
         flex-grow: 1;
+      }
+      .box16 div:nth-child(4) {
+        flex-grow: 2;
       }
     </style>
   </body>
