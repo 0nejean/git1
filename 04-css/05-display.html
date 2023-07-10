@@ -268,7 +268,6 @@
     <div class="box-g box16">
       <div>가</div>
       <div>가나</div>
-      <div>가나다</div>
       <div>가나다라</div>
     </div>
     <style>
@@ -276,13 +275,21 @@
         display: flex;
       }
       .box16 div {
-        flex-basis: auto;
+        /* 
+        1:1:2 비율로 나누고 싶은데... 
+        flex-basis: auto; (기본값) 글자의 개수만큼 가로 사이즈가 늘어남
+        flex-basis: 0; 글자 개수 상관없이 비율대로 배치 
+        */
+        flex-basis: 0;
+        width: auto;
+        text-align: center;
       }
-      .box16 div:nth-child(-n + 3) {
+      .box16 div:nth-child(-n + 2) {
         flex-grow: 1;
+        /* 오토 맞춘 글자 제외한 나머지 크기가 1 */
       }
-      .box16 div:nth-child(4) {
-        flex-grow: 2;
+      .box16 div:last-child {
+        flex-grow: 3;
       }
     </style>
   </body>
