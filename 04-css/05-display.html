@@ -86,8 +86,8 @@
         background: rgb(207, 207, 207);
       }
       .box-g div {
-        width: 100px;
-        height: 100px;
+        /* width: 100px;
+        height: 100px; */
         background: lightcoral;
         border: 1px solid #000;
       }
@@ -218,6 +218,26 @@
       }
       .box13 div:nth-child(2) {
         order: 3;
+      }
+    </style>
+    <h2>flex-grow</h2>
+    <div class="box-g box14">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box14 {
+        display: flex;
+      }
+      .box14 div:nth-child(3) {
+        flex-grow: 8;
+      }
+      .box14 div:nth-child(2) {
+        flex-grow: 1;
+      }
+      .box14 div:nth-child(1) {
+        flex-grow: 1;
       }
     </style>
   </body>
