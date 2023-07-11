@@ -119,4 +119,51 @@
       text-decoration: none;
     }
   </style>
+  <h2>shadow</h2>
+  <div class="box1">가나다라마바사</div>
+  <style>
+    .box1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 300px;
+      margin: 50px auto;
+      background-color: #999;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      text-shadow: 0 0 8px #000;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
+  <h2>text-overflow</h2>
+  <ul class="lst-bbs">
+    <li>
+      <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a>
+    </li>
+    <li>
+      <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a>
+    </li>
+    <li>
+      <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a>
+    </li>
+    <li>
+      <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a>
+    </li>
+    <li>
+      <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a>
+    </li>
+  </ul>
+  <style>
+    .lst-bbs a {
+      overflow: hidden;
+      display: block;
+      width: 300px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      background: red;
+    }
+  </style>
 </html>
