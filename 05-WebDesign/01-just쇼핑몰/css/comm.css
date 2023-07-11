@@ -46,7 +46,7 @@
 }
 .gnb .depth1 > li:hover > a {
   /* background: #0060ff; */
-  border-bottom: 5px solid #0060ff;
+  border-bottom: 5px solid rgb(255, 0, 77);
 }
 .gnb .depth1 > li:last-child .depth2 {
   border-right: 1px solid #dbdbdb;
@@ -83,7 +83,7 @@
   line-height: 40px;
 }
 .gnb .depth2 a:hover {
-  background-color: #0060ff;
+  background-color: rgb(255, 0, 77);
   color: #fff;
 }
 
@@ -159,7 +159,7 @@
   height: 5px;
   margin-top: -4px;
   margin-right: 10px;
-  background: red;
+  background: rgb(255, 0, 77);
 }
 .lst-bbs li a {
   display: block;
@@ -204,12 +204,12 @@
 .goto li {
   width: calc(50% - 5px);
   height: calc(50% - 5px);
-  background: blue;
+  background: rgb(255, 0, 77);
 }
 .goto a {
   display: block;
   height: 100%;
-  background: red;
+  background: rgb(255, 0, 77);
 }
 
 .footer {
