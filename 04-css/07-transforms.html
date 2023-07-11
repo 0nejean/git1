@@ -38,23 +38,40 @@
         height: 300px;
         background: red;
         opacity: 0.5;
+        transition: transform 1s 0.5s;
+        transition-timing-function: ease-in-out;
       }
 
-      .t1 {
+      .t1:hover {
         transform: translate(50px, 50px);
       }
-
       .t2 {
+        transition-delay: 2s;
+      }
+      .t2:hover {
         transform: rotate(-45deg);
       }
-      .t3 {
+      .t3:hover {
         transform: scale(0.7);
       }
-      .t4 {
+      .t4:hover {
         transform: skew(2deg, 50deg);
       }
-      .t5 {
-        transform: matrix(1, -0.3, 0, 1, 0, 0);
+      .t5:hover {
+        transform: translateX(30px) scale(0.8) rotate(45deg);
+      }
+    </style>
+
+    <h2>3D transforms</h2>
+    <div class="box-g">
+      <div class="t t6">3D</div>
+    </div>
+    <style>
+      .box-g {
+        perspective: 500px;
+      }
+      .t6:hover {
+        transform: rotateX(150deg);
       }
     </style>
   </body>
