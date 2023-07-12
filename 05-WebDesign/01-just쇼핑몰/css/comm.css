@@ -98,10 +98,31 @@
   height: 300px;
 }
 .lst-slide {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 0;
   left: 0;
+  animation: slide-ani 9s alternate infinite;
+}
+@keyframes slide-ani {
+  0% {
+    top: 0;
+  }
+  30% {
+    top: 0;
+  }
+  33% {
+    top: -300px;
+  }
+  33% {
+    top: -300px;
+  }
+  66% {
+    top: -600px;
+  }
+  100% {
+    top: -600px;
+  }
 }
 
 /* contents */
