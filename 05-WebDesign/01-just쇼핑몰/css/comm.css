@@ -102,22 +102,22 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: slide-ani 9s alternate infinite;
+  animation: slide-ani 9s linear alternate infinite;
 }
 @keyframes slide-ani {
   0% {
     top: 0;
   }
-  30% {
+  35% {
     top: 0;
   }
-  33% {
+  37% {
     top: -300px;
   }
-  33% {
-    top: -300px;
+  70% {
+    top: -600px;
   }
-  66% {
+  73% {
     top: -600px;
   }
   100% {
@@ -225,12 +225,12 @@
 .goto li {
   width: calc(50% - 5px);
   height: calc(50% - 5px);
-  background: rgb(255, 0, 77);
+  background: rgb(195, 195, 195);
 }
 .goto a {
   display: block;
   height: 100%;
-  background: rgb(255, 0, 77);
+  background: rgb(195, 195, 195);
 }
 
 .footer {
