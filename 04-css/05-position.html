@@ -158,5 +158,26 @@
         background: red;
       }
     </style>
+
+    <h2>가운데 정렬:transform</h2>
+    <div class="box5">
+      <div class="item"></div>
+    </div>
+    <style>
+      .box5 {
+        position: relative;
+        height: 500px;
+        background: lightcyan;
+      }
+      .box5 .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20%;
+        height: 20%;
+        background: blue;
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </body>
 </html>
