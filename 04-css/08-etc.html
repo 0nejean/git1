@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ETC | css</title>
+  </head>
+  <body>
+    <h1>tooltip</h1>
+
+    <div class="tooltip-wrap">
+      tooltip 보기
+      <div class="tooltip-item">
+        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      </div>
+    </div>
+
+    <style>
+      .tooltip-wrap {
+        display: inline-block;
+        position: relative;
+        font-weight: bold;
+        font-size: 20px;
+        color: blue;
+        background: greenyellow;
+      }
+      .tooltip-item {
+        position: absolute;
+        top: 50%;
+        right: -130%;
+        display: inline-block;
+        /* 인라인이지만 블록으로 처리 */
+        max-width: 100px;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: normal;
+        color: #fff;
+        background: #555;
+        border-radius: 5px;
+        transform: translateY(-50%);
+        /* word-break: break-all; */
+      }
+    </style>
+  </body>
+</html>
