@@ -4,12 +4,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>ETC | css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        line-height: 1.5;
+        color: #000;
+        box-sizing: border-box;
+      }
+    </style>
   </head>
   <body>
     <h1>tooltip</h1>
 
     <div class="tooltip-wrap">
-      tooltip 보기
+      tooltip 보기00000 <br />
+      tooltip 보기00000
       <div class="item top">top</div>
       <div class="item bottom">bottom</div>
       <div class="item right">right</div>
@@ -39,6 +51,33 @@
         text-align: center;
         box-sizing: border-box;
       }
+      .item::after {
+        content: "";
+        position: absolute;
+        border-width: 5px;
+        border-style: solid;
+        border-color: red transparent transparent transparent;
+      }
+      .top::after {
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10%);
+      }
+      .bootom::after {
+        top: 0px;
+        left: 500%;
+        transform: rotate(180deg) translateX(0%) translateY(0%);
+      }
+      .left::after {
+        top: 50%;
+        right: 0;
+        transform: rotate(-90deg) translateX(50%) translateY(100%);
+      }
+      .right::after {
+        bottom: -10px;
+        left: 50%;
+        transform: rotate(90deg) translateX(-190%) translateY(600%);
+      }
 
       .top {
         position: absolute;
@@ -53,13 +92,55 @@
         /* margin-left: -50px; */
         transform: translateX(-50%);
       }
-      .right {
-        position: absolute;
-        right: -110px;
-      }
       .left {
         position: absolute;
-        left: -110px;
+        top: 60%;
+        left: -70%;
+        margin-top: -10%;
+      }
+      .right {
+        position: absolute;
+        top: 60%;
+        right: -110px;
+        transform: translateY(-70%);
+      }
+    </style>
+
+    <h2>image style</h2>
+    <div class="image1"><img src="./images/map.jpg" alt="" /></div>
+    <style>
+      .image1 img {
+        width: 300px;
+        height: 500px;
+        object-fit: cover;
+        object-position: 50% 35%;
+        max-width: 100%;
+        border-radius: 10px;
+        border: 5px solid #000;
+        padding: 10px;
+        opacity: 100;
+        filter: grayscale();
+      }
+    </style>
+    <h2>mask</h2>
+    <div class="image2">
+      <img src="./images/img_5terre.jpg" alt="" />
+    </div>
+    <style>
+      .image2 {
+        height: 200px;
+        -webkit-mask-image: url(./images/w3logo.png);
+        mask-image: url(./images/w3logo.png);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+      }
+      .image2:hover {
+        -webkit-mask-image: linear-gradient(black, transparent);
+        mask-image: linear-gradient(black, transparent);
+      }
+      .image2 img {
+        width: 300px;
+        height: 200px;
       }
     </style>
   </body>
