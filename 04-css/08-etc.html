@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
     <title>ETC | css</title>
   </head>
   <body>
@@ -10,9 +10,10 @@
 
     <div class="tooltip-wrap">
       tooltip 보기
-      <div class="tooltip-item">
-        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-      </div>
+      <div class="item top">top</div>
+      <div class="item bottom">bottom</div>
+      <div class="item right">right</div>
+      <div class="item left">left</div>
     </div>
 
     <style>
@@ -25,21 +26,40 @@
         color: blue;
         background: greenyellow;
       }
-      .tooltip-item {
-        position: absolute;
-        bottom: -100px;
-        left: 50%;
+      .item {
         display: inline-block;
-        /* 인라인이지만 블록으로 처리 */
-        max-width: 100px;
-        padding: 5px 10px;
+        width: 100px;
+        padding: 5px 5px;
         font-size: 12px;
         font-weight: normal;
         color: #fff;
-        background: #555;
+        background: red;
         border-radius: 5px;
+        opacity: 0.5;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .top {
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        margin-left: -50px;
+      }
+      .bottom {
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        /* margin-left: -50px; */
         transform: translateX(-50%);
-        /* word-break: break-all; */
+      }
+      .right {
+        position: absolute;
+        right: -110px;
+      }
+      .left {
+        position: absolute;
+        left: -110px;
       }
     </style>
   </body>
