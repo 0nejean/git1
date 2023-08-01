@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.wrap {
+  display: flex;
+  text-align: center;
+  font-size: medium;
+  transition: 0.1s linear;
+  &:hover {
+    font-size: x-large;
+    padding: 500px;
+  }
+}

@@ -4,6 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>javascript 선행</title>
+    <link rel="stylesheet" href="./comm.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="wrap">
+      <h1>javascript</h1>
+      <br />
+
+      <h2>문자 데이터</h2>
+      <p>F12 > console 창 확인</p>
+      <p>let > console.log</p>
+      <script>
+        let myName = "someone";
+        let email = "123@4567.com";
+        let hello = `Hi There! ${myName}`;
+
+        console.log(myName);
+        console.log(email);
+        console.log(hello);
+      </script>
+      <br />
+
+      <h2>Boolean 데이터</h2>
+      <p>true, false 두 가지 값밖에 없는 논리데이터</p>
+      <script>
+        let 참 = true;
+        let isShow = true;
+
+        console.log("참" + 참);
+        console.log(`isShow : ${isShow}`);
+      </script>
+      <br />
+
+      <h2>Undefied</h2>
+      <p>값이 할당되지 않은 상태를 나타냄</p>
+      <script>
+        let undef;
+        let object = { abc: 123 };
+
+        console.log(undef);
+        console.log(object.abc);
+        console.log(object.xyz);
+      </script>
+      <br />
+
+      <h2>Null</h2>
+      <p>어떤 값이 의도적으로 비어있음을 의미합니다.</p>
+      <script>
+        let empty = null;
+
+        console.log(empty);
+      </script>
+      <br />
+
+      <h2>Object(객체 데이터)</h2>
+      <p>여러 데이터를 Key:Value 형태로 저장합니다.</p>
+      <script>
+        let user = {
+          name: "123",
+          age: 456,
+          isValid: true,
+        };
+
+        console.log(user.name);
+        console.log(user.age);
+        console.log(user.isValid);
+      </script>
+      <br />
+
+      <h2>Array(배열 데이터)</h2>
+      <p>여러 데이터를 순차적으로 저장합니다.</p>
+      <script>
+        let fruits = ["Apple", "Banana", "Cherry"];
+
+        console.log(fruits[0]);
+        console.log(fruits[1]);
+        console.log(fruits[2]);
+      </script>
+      <br />
+
+      <h2>변수</h2>
+      <p>데이터를 저장하고 참조(사용)하는 데이터의 이름</p>
+      <p>1. let은 값(데이터) 재할당 가능!</p>
+      <p>2. cost은 값(데이터) 재할당 불가능!</p>
+      <script>
+        let a = 5;
+        const b = 10;
+
+        console.log(`a:${a}`);
+        console.log(`b:${b}`);
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+
+        //  let 재할당 가능
+        a = 50;
+        console.log(`a:${a}`);
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+
+        //  const 재할당 불가능
+        b = 100;
+        console.log(`b:${b}`);
+      </script>
+      <br />
+
+      <h2>******* 함수 *******</h2>
+      <p>특정 동작(기능)을 수행하는 일부 코드의 집합(부분)</p>
+      <script></script>
+      <br />
+    </div>
+  </body>
 </html>

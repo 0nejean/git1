@@ -1,0 +1,10 @@
+.wrap {
+  display: flex;
+  text-align: center;
+  font-size: medium;
+  transition: 0.1s linear;
+}
+.wrap:hover {
+  font-size: x-large;
+  padding: 500px;
+}/*# sourceMappingURL=comm.css.map */
