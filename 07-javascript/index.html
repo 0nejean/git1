@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>javascript 선행</title>
     <link rel="stylesheet" href="./comm.css" />
+    <link rel="stylesheet" href="./css/scss/comm.scss" />
   </head>
   <body>
     <div class="wrap">
@@ -114,7 +115,121 @@
 
       <h2>******* 함수 *******</h2>
       <p>특정 동작(기능)을 수행하는 일부 코드의 집합(부분)</p>
-      <script></script>
+      <script>
+        function helloFunc() {
+          // 실행 코드
+          console.log(1 + 2);
+        }
+
+        // 함수 호출
+        helloFunc();
+
+        function returnFunc() {
+          return 1 + 2;
+        }
+
+        let returnA = returnFunc();
+
+        console.log(returnA);
+
+        // 함수의 재사용
+        function sum(c, d) {
+          return c + d;
+        }
+
+        let newA = sum(10, 5);
+        let newB = sum(5, 2);
+        let newC = sum(15, 5);
+
+        console.log(newA, newB, newC);
+
+        // 익명 함수
+        let world = function () {
+          console.log("world");
+        };
+        world();
+
+        // 객체 데이터
+      </script>
+      <br />
+
+      <h2>조건문</h2>
+      <p>조건의 결과(truthy, falsy)에 따라 다른 코드를 실행하는 구문</p>
+      <script>
+        // if
+        let sleep = true;
+        let have = false;
+        // false는 구문 출력 안됨. true로 바뀌면 다시 출력됨
+
+        if (sleep) {
+          console.log("YES!");
+        }
+
+        if (have) {
+          console.log("NO!");
+        }
+
+        // if else
+        let 수학90점 = true;
+
+        if (수학90점) {
+          console.log("합격");
+        } else {
+          console.log("불합격");
+        }
+
+        let 수학80점 = false;
+
+        if (수학80점) {
+          console.log("합격");
+        } else {
+          console.log("불합격");
+        }
+      </script>
+      <br />
+
+      <h2>DOM API</h2>
+      <p>Document Object Model, Application Programming Interface</p>
+      <div class="box">Box!</div>
+      <div class="box2">Box!!</div>
+      <div class="box3">1</div>
+      <div class="box3">2</div>
+      <div class="box3">3</div>
+      <div class="box3">4</div>
+      <script>
+        // 요소 찾기
+        let boxEl = document.querySelector(".box");
+
+        boxEl.addEventListener("click", function () {
+          console.log("click");
+        });
+
+        // 클래스 정보
+        let box2El = document.querySelector(".box2");
+        box2El.classList.add("active");
+        let isContains = box2El.classList.contains("active");
+
+        console.log(isContains);
+
+        box2El.classList.remove("active");
+        console.log(box2El.classList.contains("active"));
+
+        // 요소 모두 찾기 - for each
+        let box3Els = document.querySelectorAll(".box3");
+        console.log(box3Els);
+
+        box3Els.forEach(function (box3Els, index) {
+          box3Els.classList.add(`order-${index + 1}`);
+          console.log(index, box3Els);
+        });
+
+        // Getter, Setter
+        let box3Elss = document.querySelector(".box3");
+        console.log(box3Elss.textContent);
+
+        box3Elss.textContent = "odada";
+        console.log(box3Elss.textContent);
+      </script>
       <br />
     </div>
   </body>
