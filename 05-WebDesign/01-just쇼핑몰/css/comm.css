@@ -110,7 +110,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: slide-ani 9s linear alternate infinite;
+  /* animation: slide-ani 9s linear alternate infinite; */
 }
 @keyframes slide-ani {
   0% {
@@ -157,6 +157,7 @@
   text-align: center;
   font-size: 16px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 /* 활성화 tab */
 .tabs-wrap .on .tit {
@@ -267,7 +268,8 @@
 
 /* modal */
 .modal-dimmed {
-  display: none;
+  /* display: none; */
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -277,7 +279,16 @@
   bottom: 0;
   z-index: 10;
   background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 1.3s linear;
 }
+
+.modal-dimmed.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal-box {
   position: relative;
   width: 500px;
