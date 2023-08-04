@@ -40,17 +40,46 @@ $(function () {
   // ********* slide *********
   // *************************
   let now = 1;
+  const slideEls = $(".lst-slide");
+  let height = 100;
 
-  // 3초 마다 실행 - ~초마다 실행 = setInterval(1s = 1,000)
+  // 3초 마다 실행 1000=1초
   setInterval(function () {
     slide();
   }, 3000);
 
+  // 슬라이드 기능 만들기
   function slide() {
-    // .lst-slide를 애니메이션(top: -300px)
-    // 3초 후에 -100% 6초 후에 -200%
-    $(".lst-slide").animate({
-      top: 100 * now * -1 + "%",
-    });
+    console.log("dd");
+    // .lst-slide를 애니메이션(top:-300px)
+    // "300px"은 txt로 인식하기때문에 "문자"로 넣어야한다
+    // $(".lst-slide").animate({ top: "-300px" });
+    // 3초 후에 -300px 3초 후에 -600px이 되어야한다
+
+    // 조건문
+    // now: 0 - 1번째 슬라이드
+    // now: 1 - 2번째 슬라이드
+    // now: 2 - 3번째 슬라이드
+    // 참: 만약 1,2번째 슬라이드일 경우
+    // 거짓: 3번째 슬라이드일 경우
+    if (now < 3) {
+      // 참 일 경우
+      // 다음 슬라이드로 이동
+      // $(".lst-slide").animate({ top: "-100%" });
+      // slide-wrap 조부모의 값의 h300을 인식 100%로 넣어도 된다.
+
+      slideEls.animate({
+        top: height * now * -1 + "%",
+      });
+      // 변수 재선언
+      now = now + 1;
+    } else {
+      // 거짓 일 경우
+      // 첫번째 슬라이드로 이동
+      slideEls.animate({
+        top: 0,
+      });
+      now = 1;
+    }
   }
 });
