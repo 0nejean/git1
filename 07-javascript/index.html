@@ -4,211 +4,234 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>javascript 선행</title>
+    <link rel="stylesheet" href="./comm.css" />
+    <link rel="stylesheet" href="./css/scss/comm.scss" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
   <body>
-    <h1>javascript</h1>
-    <h2>문자 데이터</h2>
-    <script>
-      let myName = "odada";
-      let email = "eehd80@naver.com";
-      let hello = `안녕! ${myName}야`;
+    <div class="wrap">
+      <h1>javascript</h1>
+      <br />
 
-      console.log(myName);
-      console.log(email);
-      console.log(hello);
-    </script>
+      <h2>문자 데이터</h2>
+      <p>F12 - console 창 확인</p>
+      <p>let - console.log</p>
+      <script>
+        let myName = "someone";
+        let email = "123@4567.com";
+        let hello = `Hi There! ${myName}`;
 
-    <h2>boolean 데이터</h2>
-    <script>
-      let checked = true;
-      let isShow = false;
+        console.log(myName);
+        console.log(email);
+        console.log(hello);
+      </script>
+      <br />
 
-      console.log("checked : " + checked);
-      console.log(`isShow : ${isShow}`);
-    </script>
+      <h2>Boolean 데이터</h2>
+      <p>true, false 두 가지 값밖에 없는 논리데이터</p>
+      <script>
+        let 참 = true;
+        let isShow = true;
 
-    <h2>Undefied</h2>
-    <!-- 값이 할당되지 않음 -->
-    <script>
-      let undef;
-      let object = { abc: 123 };
-      console.log(undef);
-      console.log(object.abc);
-      console.log(object.xyz);
-    </script>
+        console.log("참" + 참);
+        console.log(`isShow : ${isShow}`);
+      </script>
+      <br />
 
-    <h2>null</h2>
-    <!-- 의도적으로 비워놓음 -->
-    <script>
-      let empty = null;
+      <h2>Undefied</h2>
+      <p>값이 할당되지 않은 상태를 나타냄</p>
+      <script>
+        let undef;
+        let object = { abc: 123 };
 
-      console.log(empty);
-    </script>
+        console.log(undef);
+        console.log(object.abc);
+        console.log(object.xyz);
+      </script>
+      <br />
 
-    <h2>객체 데이터</h2>
-    <script>
-      let user = {
-        name: "odada",
-        age: 100,
-        isValid: true,
-      };
+      <h2>Null</h2>
+      <p>어떤 값이 의도적으로 비어있음을 의미합니다.</p>
+      <script>
+        let empty = null;
 
-      console.log(user.name);
-      console.log(user.age);
-      console.log(user.isValid);
-    </script>
+        console.log(empty);
+      </script>
+      <br />
 
-    <h2>배열 데이터</h2>
-    <script>
-      let fruits = ["apple", "banana", "cherry"];
+      <h2>Object(객체 데이터)</h2>
+      <p>여러 데이터를 Key:Value 형태로 저장합니다.</p>
+      <script>
+        let user = {
+          name: "123",
+          age: 456,
+          isValid: true,
+        };
 
-      console.log(fruits);
-      console.log(fruits[0]);
-      console.log(fruits[1]);
-      console.log(fruits[2]);
-    </script>
+        console.log(user.name);
+        console.log(user.age);
+        console.log(user.isValid);
+      </script>
+      <br />
 
-    <h2>변수</h2>
+      <h2>Array(배열 데이터)</h2>
+      <p>여러 데이터를 순차적으로 저장합니다.</p>
+      <script>
+        let fruits = ["Apple", "Banana", "Cherry"];
 
-    <script>
-      let a = 5;
-      const b = 10;
+        console.log(fruits[0]);
+        console.log(fruits[1]);
+        console.log(fruits[2]);
+      </script>
+      <br />
 
-      console.log(`a: ${a}`);
-      console.log(`b: ${b}`);
-      console.log(a + b);
-      console.log(a - b);
-      console.log(a * b);
-      console.log(a / b);
+      <h2>변수</h2>
+      <p>데이터를 저장하고 참조(사용)하는 데이터의 이름</p>
+      <p>1. let은 값(데이터) 재할당 가능!</p>
+      <p>2. cost은 값(데이터) 재할당 불가능!</p>
+      <script>
+        let a = 5;
+        const b = 10;
 
-      // let 재할당 가능
-      a = 50;
-      console.log(`a: ${a}`);
-      console.log(a + b);
-      console.log(a - b);
-      console.log(a * b);
-      console.log(a / b);
+        console.log(`a:${a}`);
+        console.log(`b:${b}`);
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
 
-      // const 재할당 불가
-      b = 100;
-      console.log(`b: ${b}`);
-    </script>
+        //  let 재할당 가능
+        a = 50;
+        console.log(`a:${a}`);
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
 
-    <h2>Function</h2>
-    <script>
-      // 함수 선언
-      function helloFunc() {
-        // 실행 코드
-        console.log(1 + 2);
-      }
+        //  const 재할당 불가능
+        b = 100;
+        console.log(`b:${b}`);
+      </script>
+      <br />
 
-      // 함수 호출
-      helloFunc();
+      <h2>******* 함수 *******</h2>
+      <p>특정 동작(기능)을 수행하는 일부 코드의 집합(부분)</p>
+      <script>
+        function helloFunc() {
+          // 실행 코드
+          console.log(1 + 2);
+        }
 
-      // 함수 내보내기
-      function returnFunc() {
-        return 1 + 2;
-      }
+        // 함수 호출
+        helloFunc();
 
-      let returnA = returnFunc();
+        function returnFunc() {
+          return 1 + 2;
+        }
 
-      console.log(returnA);
+        let returnA = returnFunc();
 
-      // 함수의 재사용
-      function sum(c, d) {
-        return c + d;
-      }
+        console.log(returnA);
 
-      let newA = sum(10, 5);
-      let newB = sum(30, 50);
+        // 함수의 재사용
+        function sum(c, d) {
+          return c + d;
+        }
 
-      console.log(newA, newB);
+        let newA = sum(10, 5);
+        let newB = sum(5, 2);
+        let newC = sum(15, 5);
 
-      // 익명 함수
-      let world = function () {
-        console.log("World");
-      };
+        console.log(newA, newB, newC);
 
-      world();
-    </script>
+        // 익명 함수
+        let world = function () {
+          console.log("world");
+        };
+        world();
 
-    <h2>조건문</h2>
-    <script>
-      let sleep = true;
-      let have = true;
+        // 객체 데이터
+      </script>
+      <br />
 
-      if (sleep) {
-        console.log("ㅜㅜ");
-      }
+      <h2>조건문</h2>
+      <p>조건의 결과(truthy, falsy)에 따라 다른 코드를 실행하는 구문</p>
+      <script>
+        // if
+        let sleep = true;
+        let have = false;
+        // false는 구문 출력 안됨. true로 바뀌면 다시 출력됨
 
-      if (have) {
-        console.log("^,.^");
-      }
+        if (sleep) {
+          console.log("YES!");
+        }
 
-      let math = false;
+        if (have) {
+          console.log("NO!");
+        }
 
-      if (math) {
-        // 참 일 경우
-        console.log("참 잘했어요.");
-      } else {
-        // 거짓 일 경우
-        console.log("좀 더 노력하세요.");
-      }
-    </script>
+        // if else
+        let 수학90점 = true;
 
-    <h2>요소 찾기</h2>
-    <div class="box">Box!!</div>
-    <script>
-      let boxEl = document.querySelector(".box");
+        if (수학90점) {
+          console.log("합격");
+        } else {
+          console.log("불합격");
+        }
 
-      boxEl.addEventListener("click", function () {
-        // 실행코드
-        console.log("Click");
-      });
-    </script>
+        let 수학80점 = false;
 
-    <div class="box2">box2</div>
-    <script>
-      // html 요소 찾기/검색
-      let box2El = document.querySelector(".box2");
+        if (수학80점) {
+          console.log("합격");
+        } else {
+          console.log("불합격");
+        }
+      </script>
+      <br />
 
-      box2El.classList.add("active");
-      let isContains = box2El.classList.contains("active");
-      console.log(isContains);
+      <h2>DOM API</h2>
+      <p>Document Object Model, Application Programming Interface</p>
+      <div class="box">Box!</div>
+      <div class="box2">Box!!</div>
+      <div class="box3">1</div>
+      <div class="box3">2</div>
+      <div class="box3">3</div>
+      <div class="box3">4</div>
+      <script>
+        // 요소 찾기
+        let boxEl = document.querySelector(".box");
 
-      box2El.classList.remove("active");
-      console.log(box2El.classList.contains("active"));
-    </script>
+        boxEl.addEventListener("click", function () {
+          console.log("click");
+        });
 
-    <h2>forEach</h2>
-    <div class="box3">1</div>
-    <div class="box3">2</div>
-    <div class="box3">3</div>
-    <div class="box3">4</div>
-    <script>
-      let box3Els = document.querySelectorAll(".box3");
-      console.log(box3Els);
+        // 클래스 정보
+        let box2El = document.querySelector(".box2");
+        box2El.classList.add("active");
+        let isContains = box2El.classList.contains("active");
 
-      box3Els.forEach(function (box3El, index) {
-        box3El.classList.add(`order-${index + 1}`);
-        console.log(index, box3El);
-      });
-    </script>
+        console.log(isContains);
 
-    <h2>Getter, Setter</h2>
-    <div class="box4">1</div>
-    <div class="box4">2</div>
-    <div class="box4">3</div>
-    <div class="box4">4</div>
-    <script>
-      let box4El = document.querySelector(".box4");
+        box2El.classList.remove("active");
+        console.log(box2El.classList.contains("active"));
 
-      // Getter, 값을 얻는 용도
-      console.log(box4El.textContent);
+        // 요소 모두 찾기 - for each
+        let box3Els = document.querySelectorAll(".box3");
+        console.log(box3Els);
 
-      // Setter, 값을 지정하는 용도
-      box4El.textContent = "odada";
-      console.log(box4El.textContent);
-    </script>
+        box3Els.forEach(function (box3Els, index) {
+          box3Els.classList.add(`order-${index + 1}`);
+          console.log(index, box3Els);
+        });
+
+        // Getter, Setter
+        let box3Elss = document.querySelector(".box3");
+        console.log(box3Elss.textContent);
+
+        box3Elss.textContent = "odada";
+        console.log(box3Elss.textContent);
+      </script>
+      <br />
+    </div>
   </body>
 </html>
