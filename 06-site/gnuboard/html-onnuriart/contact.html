@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./dist/dd/css/comm.css" />
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="area-subtit">
+                <h2 id="container_title">
+                    <span title="공연 및 체험문의하기">
+                        공연 및 체험문의하기
+                        <em>Ask about Performances and Experiences</em>
+                    </span>
+                </h2>
+            </div>
+            <div class="container contact-wrap">
+                <div class="img">
+                    <img src="https://cdn.imweb.me/thumbnail/20211021/b256109db0797.jpg" alt="" />
+                </div>
+                <div id="contacts" class="contacts">
+                    <form action="">
+                        <fieldset>
+                            <legend>공연 및 체험 문의하기</legend>
+                            <ul>
+                                <li>
+                                    <label for="name">이름</label>
+                                    <input type="text" name="name" id="name" />
+                                </li>
+                                <li>
+                                    <label for="email">이메일</label>
+                                    <input type="email" name="email" id="email" />
+                                </li>
+                                <li>
+                                    <label for="phone">연락처</label>
+                                    <input type="tel" name="phone" id="phone" maxlength="16" />
+                                </li>
+                                <li>
+                                    <label for="content">문의내용</label>
+                                    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                                </li>
+                            </ul>
+                            <input type="submit" class="btn-write" value="작성" />
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
