@@ -26,7 +26,6 @@
   position: relative;
   padding-left: 12px;
 }
-
 .dot li::before {
   content: "";
   position: absolute;
@@ -44,75 +43,56 @@
 .sec-g {
   background-color: #fff;
 }
-
 .sec-g .container {
   padding: 50px 0;
 }
-
 .sec-g .sec-tit {
   font-size: 30px;
   font-weight: normal;
 }
-
 .sec-g .sec-tit.tit-type2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
 .sec-g .sec-tit.tit-type2 .tit {
   width: 33%;
 }
-
 .sec-g .sec-tit.tit-type2 .txt {
   width: 66%;
 }
-
 .sec-g .sec-tit .tit {
   font-size: 30px;
   font-weight: normal;
 }
-
 .sec-g .sec-tit em {
   display: inline-block;
   margin-left: 10px;
   font-size: 18px;
   font-style: normal;
 }
-
 .sec-g .sec-tit .txt {
   font-size: 18px;
 }
-
 .sec-g .sec-tit img {
   width: 100%;
 }
-
 .sec-g .sec-cont {
   margin-top: 40px;
   font-size: 16px;
   line-height: 1.9;
 }
-
 .sec-g .sec-cont .txt-intro {
   margin-bottom: 30px;
 }
-
 .sec-g.bg-gray {
   background-color: #e9e9e9;
 }
-
 .sec-g.bg-red {
   background-color: #9e3232;
 }
-
 .sec-g.bg-red .sec-tit {
   color: #fff;
 }
-
 .sec-g.bg-red .sec-cont p,
 .sec-g.bg-red .sec-cont li {
   color: #fff;
@@ -142,12 +122,10 @@
   height: 346px;
   background: url(../../../images/about-head.jpg) no-repeat 50% 50%/cover;
 }
-
 .visual-sub .txt {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 30px;
@@ -159,12 +137,10 @@
   display: block;
   width: 100%;
 }
-
 .mVisual .txt {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 30px;
@@ -174,11 +150,7 @@
 
 .sec-about .container,
 .sec-facility .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -196,16 +168,13 @@
 .sec-vision.sec-edu .sec-cont::before {
   display: none;
 }
-
 .sec-vision.sec-edu .sec-cont .txt {
   width: 100%;
   margin-left: 0;
 }
-
 .sec-vision.sec-edu .sec-cont dl {
   padding-left: calc(35% + 40px);
 }
-
 .sec-vision.sec-edu .sec-cont dl::before {
   content: "";
   position: absolute;
@@ -214,28 +183,22 @@
   bottom: 0;
   width: 35%;
 }
-
 .sec-vision.sec-edu .sec-cont dl:first-child::before {
   background: url(../../../images/facility-edu1.jpg) 0 33%/cover no-repeat;
 }
-
 .sec-vision.sec-edu .sec-cont dl:last-child {
   border-bottom: none;
 }
-
 .sec-vision.sec-edu .sec-cont dl:last-child::before {
   background: url(../../../images/facility-edu2.jpg) 0 26%/cover no-repeat;
 }
-
 .sec-vision .sec-tit {
   padding-bottom: 10px;
 }
-
 .sec-vision .sec-cont {
   position: relative;
   width: 100%;
 }
-
 .sec-vision .sec-cont::before {
   content: "";
   position: absolute;
@@ -245,24 +208,20 @@
   width: 35%;
   background: url(../../../images/about-img1.jpg) no-repeat 100% 100%/cover;
 }
-
 .sec-vision .txt {
   width: 65%;
   margin-left: 35%;
 }
-
 .sec-vision .txt dl {
   position: relative;
   padding: 48px 0 48px 40px;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
-
 .sec-vision .txt dt {
   margin-bottom: 20px;
   font-size: 30px;
   color: #4f4f4f;
 }
-
 .sec-vision .txt dd {
   font-size: 18px;
   color: #4f4f4f;
@@ -271,26 +230,19 @@
 .sec-history {
   background-color: #972e2e;
 }
-
 .sec-history .container {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
-
 .sec-history .lst-history li {
   margin-bottom: 10px;
   padding-left: 20px;
   font-size: 18px;
 }
-
 .sec-history .lst-history li::before {
   top: 18px;
   background-color: #fff;
   opacity: 0.7;
 }
-
 .sec-history .sec-cont {
   width: 100%;
 }
@@ -302,28 +254,21 @@
 }
 
 .sec-member .lst-member {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
 }
-
 .sec-member .lst-member > li {
   width: 23%;
   margin-right: 2.6%;
   margin-bottom: 70px;
 }
-
 .sec-member .lst-member > li:nth-child(4n) {
   margin-right: 0;
 }
-
 .sec-member .lst-member img {
   width: 100%;
 }
-
 .sec-member .lst-member .name {
   display: block;
   font-size: 22px;
@@ -332,13 +277,11 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   text-align: center;
 }
-
 .sec-member .lst-career li {
   margin-bottom: 8px;
   line-height: 1.4;
   font-size: 13px;
 }
-
 .sec-member .lst-career .lts {
   letter-spacing: -0.5px;
 }
@@ -354,77 +297,51 @@
 .sec-map .txt {
   margin-top: 30px;
 }
-
 .sec-map .address {
   display: block;
   text-decoration: underline;
 }
-
 .sec-map .ul_txt em {
   color: #972e2e;
   font-style: normal;
 }
-
 .sec-map .sec-cont .txt {
   margin-bottom: 10px;
 }
 
 .lst-thumb {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 -15px;
 }
-
 .lst-thumb li {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   padding: 0 15px;
 }
-
 .lst-thumb img {
   width: 100%;
 }
 
 .lst-thumb2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin: -5px;
 }
-
 .lst-thumb2 a {
   position: relative;
   display: block;
   width: 25%;
   padding: 5px 5px;
 }
-
 .lst-thumb2 a:hover .desc {
   opacity: 1;
 }
-
 .lst-thumb2 .desc {
   content: "";
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 5px;
   left: 5px;
@@ -437,15 +354,12 @@
   font-size: 12px;
   line-height: 1.5;
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-
 .lst-thumb2 .desc span {
   display: block;
   margin-bottom: 10px;
 }
-
 .lst-thumb2 img {
   width: 100%;
 }
@@ -476,39 +390,29 @@
 }
 
 .contact-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 40px 0;
 }
-
 .contact-wrap .img {
   width: 49%;
 }
-
 .contact-wrap .img img {
   display: block;
   width: 100%;
 }
-
 .contact-wrap .contacts {
   width: 49%;
   padding-top: 5px;
 }
-
 .contact-wrap .contacts li {
   margin-bottom: 20px;
 }
-
 .contact-wrap .contacts label {
   display: block;
   margin-bottom: 5px;
   color: #4f4f4f;
 }
-
 .contact-wrap .contacts input,
 .contact-wrap .contacts textarea {
   display: block;
@@ -518,17 +422,14 @@
   border: 1px solid #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
-
 .contact-wrap .contacts input:focus,
 .contact-wrap .contacts textarea:focus {
   border-bottom: 1px solid red;
 }
-
 .contact-wrap .contacts textarea {
   height: 89px;
   resize: vertical;
 }
-
 .contact-wrap .contacts .btn-write {
   display: inline-block;
   width: 80px;
@@ -539,8 +440,8 @@
   text-align: center;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -557,11 +458,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .help-etc .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 7px;
   font-family: "NanumBarunGothic", serif;
 }
@@ -585,4 +483,5 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0 auto;
   padding: 20px 0 50px;
 }
+
 /*# sourceMappingURL=comm.css.map */
