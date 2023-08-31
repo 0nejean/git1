@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@import "variables", "mixin", "reset", "main", "contents";
+
+// 변수가 있으면, 항상 변수가 제일 먼저 - variables > mixin > reset > main 순
+// 공통요소 : header, footer, button, icon, box가 comm scss에 포함됨
+$hdWidth: 200px;
+
+.wrap {
+  display: flex;
+  height: 100vh;
+  // 내가 지금 사용하는 화면의 크기 viewpoint의 1% 값 = vh
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  width: $hdWidth;
+  padding: 40px 0;
+  background: $hdWidth;
+}
+
+#main {
+  width: calc(100% - 200px);
+  height: 100vh;
+  background: black;
+}
+
+#logo {
+  a {
+    display: block;
+    width: 150px;
+    height: 116px;
+    margin: 0 auto;
+    background: url(../images/logo1.png) 0 0 / contain no-repeat;
+    text-indent: -9999px;
+  }
+}
+
+#gnb {
+  width: 100px;
+  margin: 70px auto 0;
+  .depth1 {
+    a {
+      display: block;
+      padding: 7px 20px;
+    }
+  }
+}
+
+.spot {
+  margin-top: auto;
+  // 전체 header에 flex, flex direction하고 spot에만 마진 탑 오토주면 자동으로 전체 넓이를 채우기 위해서 전체 그리드 조정
+  .spot-g {
+    display: flex;
+    justify-content: center;
+    a {
+      display: block;
+      padding: 10px;
+    }
+  }
+
+  .contact {
+    a {
+      position: relative;
+      font-size: 12px;
+      &:first-child::before {
+        display: none;
+      }
+      &::before {
+        content: "";
+        @include posY;
+        left: 0;
+        width: 1px;
+        height: 10px;
+        background: black;
+      }
+    }
+  }
+
+  .sns {
+    a {
+      display: block;
+      width: 31px;
+      height: 29px;
+      text-indent: -9999px;
+      padding: 0;
+    }
+    .facebook {
+      background: url(../images/sns3.png) 0 0 no-repeat;
+    }
+    .twitter {
+      background: url(../images/sns4.png) 0 0 no-repeat;
+    }
+    .instagram {
+      background: url(../images/sns5.png) 0 0 no-repeat;
+    }
+  }
+}
