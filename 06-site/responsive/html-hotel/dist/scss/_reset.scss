@@ -30,7 +30,9 @@ button,
 main,
 footer,
 article,
-header {
+header,
+section,
+a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -131,22 +133,24 @@ input {
 }
 
 /* 기본 폰트 설정 */
-/* mobile */
+/* mobile X desktop*/
 
 body {
   background: #fff;
-  font-size: 14px;
+  font-size: 16px;
+  // 1.1429rem이 보통 기본 디폴트값이다.
   line-height: 1.5;
   font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", "sans-serif";
   color: #111;
 }
 
 /* desktop */
-@media screen and (min-width: 1280px) {
-  body {
-    font-size: 16px;
-  }
-}
+// min/max 혼동해서 쓰면 오류 잘 나므로, 하나로 통일해서 사용하는게 좋음
+// @media screen and (min-width: 91.4286rem) {
+//   body {
+//     font-size: 1.1429rem;
+//   }
+// }
 
 /* color값은 디자인가이드에 맞게사용 */
 
@@ -188,11 +192,11 @@ input[type="password"] {
 
   a {
     position: absolute;
-    top: -35px;
+    top: -2.5rem;
     left: 0;
     right: 0;
     display: inline-block;
-    padding: 7px 10px 5px;
+    padding: 0.5rem 0.7143rem 0.3571rem;
     background: #333;
     color: #fff;
     text-decoration: none;
@@ -222,9 +226,9 @@ input[type="password"] {
 .ir-pm {
   display: block;
   overflow: hidden;
-  font-size: 0px;
+  font-size: 0rem;
   line-height: 0;
-  text-indent: -9999px;
+  text-indent: -714.2143rem;
 }
 
 /* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
@@ -248,7 +252,7 @@ legend {
   width: 0;
   height: 0;
   line-height: 0;
-  text-indent: -9999px;
+  text-indent: -714.2143rem;
 }
 
 /* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */

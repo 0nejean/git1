@@ -6,6 +6,7 @@
 $hdWidth: 200px;
 $utilHeight: 40px;
 
+// layout
 .wrap {
   display: flex;
   height: 100vh;
@@ -14,11 +15,14 @@ $utilHeight: 40px;
 }
 
 #header {
-  display: flex;
-  flex-direction: column;
   width: $hdWidth;
   padding: 40px 0;
   background: $hdWidth;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
 }
 
 #main {
@@ -28,6 +32,34 @@ $utilHeight: 40px;
   background: gray;
 }
 
+@media screen and (max-width: 90rem) {
+  #main {
+    width: 100%;
+    height: 100vh;
+    padding-top: 0;
+  }
+}
+
+// 반응형 미디어쿼리 layout 영역
+// 통으로 미디이쿼리 잡는 분들도 계시지만, 부분부분해야 나중에 찾을 때 편하다고 하심.
+@media screen and (max-width: 90rem) {
+  .wrap {
+    display: block;
+  }
+
+  #header {
+    display: block;
+    width: 100%;
+    padding: 0;
+    .inner {
+      height: 6.4375rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+// header
 #logo {
   a {
     display: block;
@@ -50,8 +82,32 @@ $utilHeight: 40px;
   }
 }
 
+@media screen and (max-width: 90rem) {
+  #logo {
+    padding: 1.875rem 0 0 1.5625rem;
+    a {
+      width: 250px;
+      height: 50px;
+      background: url(../images/logo2.png) 0 0 / cover no-repeat;
+    }
+  }
+  #gnb {
+    width: auto;
+    margin: 0;
+    .depth1 {
+      display: flex;
+      a {
+        height: 103px;
+        padding: 0rem 1.25rem;
+        line-height: 103px;
+      }
+    }
+  }
+}
+
 .spot {
-  margin-top: auto;
+  // margin-top: auto;
+  margin-top: 500px;
   // 전체 header에 flex, flex direction하고 spot에만 마진 탑 오토주면 자동으로 전체 넓이를 채우기 위해서 전체 그리드 조정
   .spot-g {
     display: flex;
@@ -100,15 +156,30 @@ $utilHeight: 40px;
   }
 }
 
+@media screen and (max-width: 90rem) {
+  .spot {
+    display: none;
+  }
+}
+
 .util {
   background: lightgray;
   position: absolute;
-  width: calc(100% - 200px);
+  // width: calc(100% - 200px);
   height: 40px;
   left: 200px;
   top: 0px;
 }
 
+@media screen and (max-width: 90rem) {
+  .util {
+    position: static;
+    height: 3.125rem;
+  }
+}
+
+// main
+// section - grid
 .grid {
   display: grid;
   height: calc(100vh - $utilHeight);
@@ -214,4 +285,10 @@ $utilHeight: 40px;
 }
 .box-12 {
   background: rgba(black, 0.3);
+}
+
+@media screen and (max-width: 90rem) {
+  .grid {
+    height: calc(100vh - 153px);
+  }
 }

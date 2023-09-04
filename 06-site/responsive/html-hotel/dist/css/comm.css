@@ -1,4 +1,24 @@
 @charset "UTF-8";
+@media screen and (max-width: 1280px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: greenyellow;
+  }
+}
+@media screen and (max-width: 744px) {
+  body {
+    background-color: blueviolet;
+  }
+}
+@media screen and (max-width: 428px) {
+  body {
+    background-color: red;
+  }
+}
 /* reset */
 body,
 div,
@@ -30,7 +50,9 @@ button,
 main,
 footer,
 article,
-header {
+header,
+section,
+a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -112,21 +134,16 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 /* 기본 폰트 설정 */
-/* mobile */
+/* mobile X desktop*/
 body {
   background: #fff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", "sans-serif";
   color: #111;
 }
 
 /* desktop */
-@media screen and (min-width: 1280px) {
-  body {
-    font-size: 16px;
-  }
-}
 /* color값은 디자인가이드에 맞게사용 */
 a {
   color: #333;
@@ -163,11 +180,11 @@ input[type=password] {
 }
 #u-skip a {
   position: absolute;
-  top: -35px;
+  top: -2.5rem;
   left: 0;
   right: 0;
   display: inline-block;
-  padding: 7px 10px 5px;
+  padding: 0.5rem 0.7143rem 0.3571rem;
   background: #333;
   color: #fff;
   text-decoration: none;
@@ -193,9 +210,9 @@ input[type=password] {
 .ir-pm {
   display: block;
   overflow: hidden;
-  font-size: 0px;
+  font-size: 0rem;
   line-height: 0;
-  text-indent: -9999px;
+  text-indent: -714.2143rem;
 }
 
 /* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
@@ -217,7 +234,7 @@ legend {
   width: 0;
   height: 0;
   line-height: 0;
-  text-indent: -9999px;
+  text-indent: -714.2143rem;
 }
 
 /* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
@@ -392,11 +409,14 @@ legend {
 }
 
 #header {
-  display: flex;
-  flex-direction: column;
   width: 200px;
   padding: 40px 0;
   background: 200px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
 }
 
 #main {
@@ -405,6 +425,28 @@ legend {
   background: gray;
 }
 
+@media screen and (max-width: 90rem) {
+  #main {
+    width: 100%;
+    height: 100vh;
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 90rem) {
+  .wrap {
+    display: block;
+  }
+  #header {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  #header .inner {
+    height: 6.4375rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 #logo a {
   display: block;
   width: 150px;
@@ -423,8 +465,30 @@ legend {
   padding: 7px 20px;
 }
 
+@media screen and (max-width: 90rem) {
+  #logo {
+    padding: 1.875rem 0 0 1.5625rem;
+  }
+  #logo a {
+    width: 250px;
+    height: 50px;
+    background: url(../images/logo2.png) 0 0/cover no-repeat;
+  }
+  #gnb {
+    width: auto;
+    margin: 0;
+  }
+  #gnb .depth1 {
+    display: flex;
+  }
+  #gnb .depth1 a {
+    height: 103px;
+    padding: 0rem 1.25rem;
+    line-height: 103px;
+  }
+}
 .spot {
-  margin-top: auto;
+  margin-top: 500px;
 }
 .spot .spot-g {
   display: flex;
@@ -468,15 +532,25 @@ legend {
   background: url(../images/sns5.png) 0 0 no-repeat;
 }
 
+@media screen and (max-width: 90rem) {
+  .spot {
+    display: none;
+  }
+}
 .util {
   background: lightgray;
   position: absolute;
-  width: calc(100% - 200px);
   height: 40px;
   left: 200px;
   top: 0px;
 }
 
+@media screen and (max-width: 90rem) {
+  .util {
+    position: static;
+    height: 3.125rem;
+  }
+}
 .grid {
   display: grid;
   height: calc(100vh - 40px);
@@ -574,4 +648,10 @@ legend {
 
 .box-12 {
   background: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 90rem) {
+  .grid {
+    height: calc(100vh - 153px);
+  }
 }/*# sourceMappingURL=comm.css.map */

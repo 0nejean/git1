@@ -78,3 +78,45 @@
   left: $l;
   right: $r;
 }
+
+// // width 1440px 이하
+// @media screen and (max-width: 1440px) {
+//   body {
+//     background-color: blue;
+//   }
+// }
+
+// width 1280px 이하
+@media screen and (max-width: 1280px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+
+// *** width 1024px 이하 - tablet
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: greenyellow;
+  }
+}
+
+// width 744px 이하
+@media screen and (max-width: 744px) {
+  body {
+    background-color: blueviolet;
+  }
+}
+
+// *** width 428px 이하 - mobile
+@media screen and (max-width: 428px) {
+  body {
+    background-color: red;
+  }
+}
+
+// // width 360px 이하
+// @media screen and (max-width: 360px) {
+//   body {
+//     background-color: yellow;
+//   }
+// }
