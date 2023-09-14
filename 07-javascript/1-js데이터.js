@@ -1,19 +1,19 @@
+// <<< JS 데이터 >>>
 // * const 변수 설정 / console 원하는 변수 출력
 
-// * string 문자열
+// 1. string 문자열
 const string1 = "Hello";
 const string2 = "Hello";
 const string3 = `바보 ${string1} ${1 + 1}`;
 console.log(string1, string2, string3);
 
-// * number 숫자
+// 2. number 숫자
 const number = 123;
 const negative = -123;
 const float = 0.123;
 console.log(number + 1);
 console.log(negative + number);
 console.log(float + number);
-
 // * 숫자로 변환
 const number2 = -123.1234;
 console.log(number2 + undefined);
