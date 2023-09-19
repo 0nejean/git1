@@ -1,4 +1,4 @@
-// 1. 구조 분해 할당
+// ******* 1. 구조 분해 할당 *******
 // 배열의 구조 분해
 var a, b, rest;
 [a, b] = [10, 20];
@@ -112,3 +112,27 @@ console.log(bb);
 let key = "z";
 let { [key]: poo } = { z: "bar" };
 console.log(poo);
+
+// ******* 2. 선택적 체이닝 *******
+// 사용방법 = (?.) ?.(선택적 체이닝)를 사용하면 user가 유효한지 확인하고, 그렇지 않은 경우에는 undefined를 반환한다.
+let user = null; //정보가 없는 사용자
+//console.log(user.name);
+console.log(user?.name);
+// 선택적 체이닝 ex
+const user2 = {
+  name: "winter",
+  age: 2,
+  address: {
+    city: "seoul",
+    zipcode: "123456",
+  },
+};
+const user3 = {
+  name: "fall",
+  age: 3,
+};
+function printCity(user) {
+  return user.address?.city || "주소 정보가 없습니다.";
+}
+console.log(printCity(user2));
+console.log(printCity(user3));
