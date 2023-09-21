@@ -88,24 +88,3 @@ function getSoundss(animal) {
 console.log(getSoundss("개"));
 console.log(getSoundss("비둘기"));
 console.log(getSoundss("인간"));
-
-// ******* 4. 반복문 *******
-// for문 (초기화; 조건; 증감) { 실행될 코드 }
-// 증가
-for (let i = 0; i < 10; i++) {
-  console.log(i);
-}
-// 감소
-for (let i = 9; i > -1; i--) {
-  if (i < 5) {
-    break;
-  }
-  console.log(i);
-}
-// continue
-for (let i = 9; i > 0; i--) {
-  if (i % 2 === 0) {
-    continue;
-  }
-  console.log(i);
-}
