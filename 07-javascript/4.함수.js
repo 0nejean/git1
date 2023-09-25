@@ -74,3 +74,87 @@ function getGrade(score) {
 
 const grade = getGrade(100);
 console.log(grade); // A+
+const grade2 = getGrade(77);
+console.log(grade2);
+
+// ******* 4. 매개변수 패턴 *******
+// 매개변수 (Parameter)는 함수를 호출할 때 값을 지정하여 호출한 곳에서 함수로 값을 전달할 수 있다.
+// 매개변수는 함수 내부에서 변수와 동일하게 취급된다.
+// 매개변수는 함수를 호출할 때 값을 지정하지 않으면 undefined가 할당된다.
+
+// 기본값
+// 함수는 매개변수의 기본값을 설정할 수 있다.
+function sum(x, y = 1) {
+  return x + y;
+}
+
+console.log(sum(1, 5));
+console.log(sum(1)); // 1 + undefined = Not a Number / y에 1 할당해서 2 출력
+
+// 객체 구조 분해 할당
+// 일반적
+const user = {
+  name: "winter",
+  age: "2",
+  email: "123@4567.com",
+  emailX: "",
+};
+
+function getName(user) {
+  return user.name;
+}
+console.log(getName(user));
+
+function getName({ name }) {
+  // 매개변수에 구조 분해 할당을 사용 - const A로 잡은 매개변수에서 name 값만 빼서 사용한다.
+  return name;
+}
+console.log(getName(user));
+
+function getEmail({ email }) {
+  return email;
+}
+console.log(getEmail(user));
+
+function getEmailX({ emailX = "이메일이 없습니다." }) {
+  return emailX;
+}
+console.log(getEmailX(user));
+
+// 배열 구조 분해 할당
+// 일반적
+
+const animals = ["dog", "cat", "fish"];
+const numbers = [1, 2, 3];
+
+function getSecond([, b, c]) {
+  return [b, c];
+}
+
+console.log(getSecond(animals));
+console.log(getSecond(numbers));
+
+// ******* 5. 화살표 함수 (Arrow Function) *******
+// 화살표 함수는 function 키워드 대신 =>를 사용하여 좀 더 간략한 방법으로 함수를 선언할 수 있다.
+// 화살표 함수는 익명이기 때문에 함수 표현식으로만 사용할 수 있다.
+
+// 화살표 함수의 기본 문법
+// function 함수이름(매개변수) {실행문} --> (매개변수) => {실행문}
+// () => { ... }  매개변수가 없을 경우
+// x => { ... } 매개변수가 한 개인 경우, 소괄호를 생략할 수 있다.
+// (x, y) => { ... } 매개변수가 여러 개인 경우, 소괄호를 생략할 수 없다.
+
+function hello() {
+  console.log("hello");
+}
+const hello11 = function () {
+  console.log("hello11");
+};
+
+hello();
+hello11();
+
+const hello12 = () => {
+  console.log("hello12");
+};
+hello12();
