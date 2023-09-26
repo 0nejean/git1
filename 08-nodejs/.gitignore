@@ -1,0 +1,3 @@
+#  github 커밋에서 제외 할 파일 이름을 넣는다.
+node_modules
+*.log

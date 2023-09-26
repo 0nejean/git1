@@ -158,3 +158,26 @@ const hello12 = () => {
   console.log("hello12");
 };
 hello12();
+
+// 화살표 함수 예시
+const a = () => {};
+const b = (x) => {};
+const c = (x, y) => {};
+const d = (x) => {
+  return x + x;
+};
+const e = (x) => x + x;
+const f = (x) => {
+  console.log(x);
+  return x * x;
+};
+// 객체데이터 반환하는 경우
+const g = () => {
+  return { a: 1 };
+};
+const h = () => ({ a: 1 });
+// 배열데이터 반환하는 경우
+const i = () => {
+  return [1, 2];
+};
+const j = () => [1, 2];
