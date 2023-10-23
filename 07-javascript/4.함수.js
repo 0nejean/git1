@@ -1,4 +1,5 @@
 // ******* 1. 함수 선언하기 *******
+// import function from './module';
 // 함수 선언문과 표현식의 차이점
 // = 함수 선언문은 호이스팅이 일어나지만,
 //   함수 표현식은 호이스팅이 일어나지 않는다.
@@ -181,3 +182,132 @@ const i = () => {
   return [1, 2];
 };
 const j = () => [1, 2];
+
+// 객체 구조 분해 할당
+const user1 = {
+  name: "가을",
+  age: 2,
+};
+
+function print({ name, age }) {
+  // const { name, age } = u;
+  return `${name}은 ${age}살 입니다.`;
+}
+
+console.log(print(user1));
+
+// 배열의 구조 분해 할당
+const animals1 = ["dog", "cat", "fish"];
+
+function getSecond(array) {
+  return array[1]; // 배열의 두 번째 요소를 반환한다.
+}
+
+console.log(getSecond(animals1)); // cat
+// getSecond 함수는 animals 배열을 매개변수로 전달받아 animals[1]을 반환한다.
+
+const animals2 = ["dog", "cat", "fish"];
+
+function getSecond([, b]) {
+  // 매개변수에 구조 분해 할당을 사용한다.
+  return b; // 추출한 두 번째 요소를 반환한다.
+}
+
+console.log(getSecond(animals2)); // cat
+// getSecond 함수는 animals 배열을 매개변수로 전달받아 animals[1]을 반환한다.
+
+const animals3 = ["dog", "cat", "fish"];
+const numbers1 = [1, 2, 3];
+
+function getSecond([, b = "두 번째 요소가 없습니다."]) {
+  // 매개변수에 구조 분해 할당을 사용한다.
+  return b; // 추출한 두 번째 요소를 반환한다.
+}
+
+console.log(getSecond(animals3));
+// 두 번째 요소가 없습니다. - animals 배열에 두 번째 요소가 없기 때문에 undefined가 반환된다.
+console.log(getSecond(numbers1)); // 2
+// getSecond 함수는 numbers 배열을 매개변수로 전달받아 numbers[1]을 반환한다.
+
+// 나머지 매개변수
+function sum(...rest) {
+  console.log(rest);
+  // return이 없으면 undefined가 반환된다.
+}
+
+console.log(sum(1, 2)); // 3
+console.log(sum(1, 2, 3, 4)); // 10
+console.log(sum(1, 2, 3, 4, 5, 6, 7, 8)); // 36
+
+// a, b를 매개변수에 추가하여 상태 확인
+
+function sum(...rest) {
+  // 매개변수 rest는 인수들의 목록을 배열로 전달받는다.
+  console.log(rest);
+  // return이 없으면 undefined가 반환된다.
+
+  return rest.reduce(function (acc, current) {
+    // 추후 reduce 메소드에 대해 다룰 예정이다.
+    // reduce 메소드는 배열의 첫 번째 요소부터 순차적으로 접근하며, reduce 함수의 반환값은 누적된 결과값이다.
+    // reduce 메소드는 배열의 모든 요소를 순회하며 인수로 전달받은 콜백 함수를 반복 호출한다.
+    // acc는 누적된 결과값이고, current는 현재 요소이다.
+    return acc + current; // 배열의 모든 요소를 더하여 반환한다.
+  }, 0); // reduce 메소드의 두 번째 인수는 초기값이다. 초기값을 생략하면 배열의 첫 번째 요소가 초기값이 된다.
+}
+
+console.log(sum(1, 2)); // 3
+console.log(sum(1, 2, 3, 4)); // 10
+console.log(sum(1, 2, 3, 4, 5, 6, 7, 8)); // 36
+
+// 화살표 함수
+// 기본문법
+const name = () => {};
+() => {}; // 매개변수가 없을 경우
+(x) => {}; // 매개변수가 하나일 때 소괄호 생략가능
+(x, y) => {}; // 매개변수가 여러 개인 경우, 소괄호를 생략할 수 없다.
+(x) => {
+  return x + x;
+};
+(x) => x + x; // 중괄호 생략시 return 문 생략 가능
+(x) => {
+  console.log(x);
+  return x * x;
+};
+// const sum = (a, b) => { // 매개변수가 여러 개인 경우, 소괄호를 생략할 수 없다.
+//    return a + b;
+//}
+const sum1 = (a, b) => a + b; // 중괄호를 생략하면 return 문도 생략할 수 있다.
+console.log(sum1(1, 2)); // 3
+
+// 화살표 함수의 다양한 예시
+// 매개변수가 없는 경우
+const a1 = () => {};
+// 매개변수가 한 개인 경우
+const b1 = (x) => {};
+// 매개변수가 여러 개인 경우
+const c1 = (x, y) => {};
+// 함수의 리턴이 있는 경우
+const d1 = (x) => {
+  return x * x;
+};
+// 함수의 리턴이 있는 경우, 중괄호 생략
+const e1 = (x) => x * x;
+// return 키워드로 시작하지 않는 경우, 중괄호 생략하면 안된다.
+const f1 = (x) => {
+  console.log(x * x);
+  return x * x;
+};
+
+// 객체데이터 반환하는 경우
+const g1 = () => {
+  return { a: 1 };
+};
+// const h = () => { a: 1 };
+// 객체데이터의 중괄호를 화살표 함수의 중괄호와 구분하기 위해 소괄호를 사용한다.
+const h1 = () => ({ a: 1 });
+
+// 배열데이터 반환하는 경우
+const i1 = () => {
+  return [1, 2, 3];
+};
+const j1 = () => [1, 2, 3];
